@@ -10,11 +10,11 @@
 
   var PAGES = {
     "index.html": {
-      title: "LangStitch — Visual LangGraph IDE | Design, Export & Deploy Agents",
+      title: "LangStitch — LangGraph SDK & LangTailor IDE | Design, Export & Deploy Agents",
       description:
-        "Visual LangGraph IDE — design agent workflows on a canvas with skills, guardrails, RAG pipelines, and multi-intent routing. Export Python 3.13 projects, try live in browser, deploy with Docker and Helm.",
+        "LangStitch is the LangGraph SDK; LangTailor is the desktop IDE. Design agent workflows with skills, guardrails, RAG pipelines, and multi-intent routing. Export Python 3.13 projects and deploy with Docker and Helm.",
       keywords:
-        "LangStitch, LangGraph IDE, visual agent builder, LangGraph canvas, RAG pipeline designer, Python export, LangSmith, MCP Studio, agent guardrails, multi-intent classifier",
+        "LangStitch, LangTailor, LangGraph SDK, LangGraph IDE, visual agent builder, LangGraph canvas, RAG pipeline designer, Python export, LangSmith, MCP Studio, agent guardrails, multi-intent classifier",
       type: "website",
       jsonLd: [
         {
@@ -45,14 +45,14 @@
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: SITE_NAME,
+          name: "LangTailor",
           applicationCategory: "DeveloperApplication",
-          operatingSystem: "Windows, macOS, Linux",
+          operatingSystem: "Windows, macOS",
           description:
-            "Browser-based LangGraph designer with asset designers, RAG pipelines, Python 3.13 multi-module export, and GitHub Pages live try.",
-          url: SITE_URL + "/",
-          downloadUrl: "https://github.com/LangStitch",
-          softwareVersion: "0.1.0",
+            "LangTailor desktop IDE for LangGraph — visual canvas, asset designers, RAG pipelines, and Python 3.13 multi-module export. Built on the LangStitch SDK.",
+          url: "https://langtailor.langstitch.com/",
+          downloadUrl: "https://langtailor.langstitch.com/",
+          softwareVersion: "0.1.2",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Person", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
@@ -60,10 +60,10 @@
       ]
     },
     "try.html": {
-      title: "Try LangStitch live — Visual LangGraph IDE in your browser",
+      title: "Download LangTailor — the LangGraph desktop IDE",
       description:
-        "Try LangStitch free in your browser — drag-and-drop LangGraph canvas with no install. Open full IDE for export, Git sync, and platform features.",
-      keywords: "LangStitch live demo, LangGraph online, try agent IDE, browser LangGraph builder",
+        "Get LangTailor, the desktop LangGraph IDE for Windows and macOS — visual canvas, export, Git sync, and platform features.",
+      keywords: "LangTailor download, LangGraph IDE, desktop agent builder, LangStitch SDK",
       type: "website"
     }
   };

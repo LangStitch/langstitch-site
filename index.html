@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LangStitch — Visual LangGraph IDE</title>
-  <meta name="description" content="Design LangGraph agent workflows visually. Skills, guardrails, RAG, multi-intent routing, and Python 3.13 export — try it live in your browser." />
+  <meta name="description" content="Design LangGraph agent workflows in the LangTailor desktop IDE, or build them in code with the LangStitch SDK. Skills, guardrails, RAG, multi-intent routing, and Python 3.13 export." />
   <meta name="theme-color" content="#6366f1" />
   <link rel="canonical" href="https://langstitch.com/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
@@ -33,8 +33,8 @@
         guardrails, RAG pipelines, and export a Python&nbsp;3.13 multi-module project in one click.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://vijayptiwari.github.io/LangStitch/app/">Try in browser</a>
-        <a class="btn btn-secondary" href="https://langtailor.langstitch.com/">Download LangTailor</a>
+        <a class="btn btn-primary" href="https://langtailor.langstitch.com/">Download LangTailor</a>
+        <a class="btn btn-secondary" href="#sdk">Explore the SDK</a>
         <a class="btn btn-secondary" href="https://github.com/LangStitch">GitHub</a>
       </div>
       <div class="hero-badges">
@@ -51,20 +51,21 @@
     <div class="container-wide">
       <div class="start-grid">
         <div class="start-copy">
-          <p class="eyebrow">Open the IDE</p>
+          <p class="eyebrow">Get the IDE</p>
           <h2>Design on a production-grade canvas</h2>
           <p class="start-lede">
-            Run LangStitch instantly in your browser, or download the LangTailor desktop IDE for the
-            full experience — asset designers, export, and platform tools in a dedicated viewport.
+            Download the LangTailor desktop IDE for the full experience — visual canvas, asset
+            designers, export, and platform tools. Prefer code? Build the same graphs with the
+            LangStitch SDK.
           </p>
           <div class="start-actions">
-            <a class="btn btn-primary" href="https://vijayptiwari.github.io/LangStitch/app/">Try in browser</a>
-            <a class="btn btn-secondary" href="https://langtailor.langstitch.com/">Download LangTailor IDE</a>
+            <a class="btn btn-primary" href="https://langtailor.langstitch.com/">Download LangTailor IDE</a>
+            <a class="btn btn-secondary" href="#sdk">Use the SDK</a>
             <a class="btn btn-secondary" href="docs/">Read docs</a>
           </div>
           <ul class="start-steps">
-            <li><strong>Browser</strong> — <a href="https://vijayptiwari.github.io/LangStitch/app/">open the web IDE</a> (GitHub Pages, zero install)</li>
-            <li><strong>Desktop</strong> — <a href="https://langtailor.langstitch.com/">download LangTailor</a> for Windows &amp; macOS</li>
+            <li><strong>Desktop IDE</strong> — <a href="https://langtailor.langstitch.com/">download LangTailor</a> for Windows &amp; macOS</li>
+            <li><strong>SDK</strong> — <code>pip install langstitch</code> for code-first graphs</li>
             <li><strong>Docker</strong> — full stack with Platform API on port 8080</li>
             <li><strong>Local dev</strong> — <code>npm install && npm start</code></li>
           </ul>
@@ -89,7 +90,7 @@ npm start</code></pre>
             <span class="product-preview__dot"></span>
             <span class="product-preview__dot"></span>
             <span class="product-preview__dot"></span>
-            <span class="product-preview__title">LangStitch · billing-agent.langstitch</span>
+            <span class="product-preview__title">LangTailor · billing-agent.langstitch</span>
           </div>
           <div class="product-preview__body">
             <div class="preview-sidebar">
@@ -357,11 +358,11 @@ class Server:
               <td><span class="mark-no">✗</span> Own runtime</td>
             </tr>
             <tr>
-              <td>Try in browser (zero install)</td>
-              <td class="compare-highlight"><span class="mark-yes">✓</span> Hosted web IDE</td>
-              <td>Cloud account</td>
-              <td>Self-host or cloud</td>
-              <td>Cloud or self-host</td>
+              <td>Desktop IDE (Windows / macOS)</td>
+              <td class="compare-highlight"><span class="mark-yes">✓</span> LangTailor download</td>
+              <td><span class="mark-yes">✓</span> Studio desktop + cloud</td>
+              <td>Self-host web</td>
+              <td>Cloud / web</td>
             </tr>
             <tr>
               <td>Asset designers (skills, guardrails, rules, personas)</td>
@@ -487,8 +488,8 @@ class Server:
               hooks — the path from canvas to cluster without a separate toolchain.
             </li>
             <li>
-              <strong>Developer-first defaults</strong> — Open IDE on GitHub Pages, Docker one-liner, Playwright
-              E2E, agent smoke tests, and MIT license — optimized for teams who own their runtime.
+              <strong>Developer-first defaults</strong> — LangTailor desktop IDE, LangStitch SDK, Docker one-liner,
+              Playwright E2E, agent smoke tests, and MIT license — optimized for teams who own their runtime.
             </li>
           </ol>
         </article>

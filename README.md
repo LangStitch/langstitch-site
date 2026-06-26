@@ -1,7 +1,7 @@
 # LangStitch — Product Website
 
-Marketing site and documentation for [LangStitch](https://langstitch.com), the
-visual LangGraph IDE.
+Marketing site and documentation for the LangStitch ecosystem: the **LangStitch SDK**
+(code-first LangGraph) and the **LangTailor** desktop IDE.
 
 - **Live:** https://langstitch.com
 - **Docs:** https://langstitch.com/docs/
@@ -12,7 +12,7 @@ visual LangGraph IDE.
 
 ```
 index.html      Landing page
-try.html        Lightweight "try" redirect page
+try.html        Redirect to the LangTailor download
 styles.css      Site styles
 assets/         JS (SEO/structured data) and media
 docs/           Documentation + SDK user guide
