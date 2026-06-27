@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Deploy via FTPS
+      - name: Deploy main site via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -35,3 +35,16 @@ jobs:
             **/.git*/**
             **/.github/**
             README.md
+
+      # The SDK docs live at the sdk.langstitch.com subdomain, whose docroot is a
+      # sibling of public_html (default sdk/). Mirror the sdk/ folder there too so the
+      # subdomain serves the docs, not just langstitch.com/sdk/.
+      - name: Deploy SDK docs to sdk subdomain via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./sdk/
+          server-dir: ${{ vars.SDK_SERVER_DIR || 'sdk/' }}
