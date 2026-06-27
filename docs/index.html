@@ -61,7 +61,7 @@
         </article>
         <article class="card card-highlight">
           <h3>SDK (PyPI)</h3>
-          <pre><code>pip install langstitch
+          <pre><code>pip install langstitch-sdk
 langstitch new my-agent</code></pre>
           <p>Build LangGraph apps with the Python SDK</p>
         </article>
@@ -115,9 +115,9 @@ langstitch new my-agent</code></pre>
         </table>
       </div>
       <pre><code># pick what you need
-pip install langstitch                               # core only
-pip install "langstitch[server,graph,llm,http]"      # typical agent service
-pip install "langstitch[all]"                        # everything</code></pre>
+pip install langstitch-sdk                               # core only
+pip install "langstitch-sdk[server,graph,llm,http]"      # typical agent service
+pip install "langstitch-sdk[all]"                        # everything</code></pre>
       <p class="section-lead">
         <strong>Design note:</strong> importing <code>langstitch</code> never imports FastAPI, LangGraph,
         LangChain, or httpx. Each helper imports its dependency lazily and raises a clear, actionable
@@ -472,7 +472,7 @@ CMD ["langstitch", "run", "--host", "0.0.0.0", "--port", "8000"]</code></pre>
         <table class="compare-table">
           <thead><tr><th>Symptom</th><th>Cause &amp; fix</th></tr></thead>
           <tbody>
-            <tr><td><code>RuntimeError: … requires &lt;pkg&gt;</code></td><td>missing extra — <code>pip install "langstitch[server|graph|llm|http]"</code></td></tr>
+            <tr><td><code>RuntimeError: … requires &lt;pkg&gt;</code></td><td>missing extra — <code>pip install "langstitch-sdk[server|graph|llm|http]"</code></td></tr>
             <tr><td><code>No graph registered</code></td><td>mark the root graph <code>@graph(entrypoint=True)</code> and ensure its module is imported</td></tr>
             <tr><td>Component missing from <code>info</code></td><td>its module isn't imported — add it to <code>app/__init__.py</code></td></tr>
             <tr><td><code>external service … not configured</code></td><td>add it under <code>external_services</code> in config (or pass the right name)</td></tr>
