@@ -3,7 +3,7 @@
   var SITE_PATH = "";
   var SITE_URL = SITE_ORIGIN + SITE_PATH;
   var SITE_NAME = "LangStitch";
-  var TWITTER = "@vijayptiwari";
+  var TWITTER = "";
   var AUTHOR = "Vijay Prakash Tiwari";
   var EMAIL = "connect@langstitch.com";
   var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/photos/hero.png";
