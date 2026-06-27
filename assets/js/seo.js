@@ -7,14 +7,16 @@
   var AUTHOR = "Vijay Prakash Tiwari";
   var EMAIL = "connect@langstitch.com";
   var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/photos/hero.png";
+  var LANGTAILOR_URL = "https://langtailor.langstitch.com/";
+  var OPENVSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
 
   var PAGES = {
     "index.html": {
-      title: "LangStitch — LangGraph SDK & LangTailor IDE | Design, Export & Deploy Agents",
+      title: "LangStitch — Visual LangGraph IDE | Download VSX & LangTailor",
       description:
-        "LangStitch is the LangGraph SDK; LangTailor is the desktop IDE. Design agent workflows with skills, guardrails, RAG pipelines, and multi-intent routing. Export Python 3.13 projects and deploy with Docker and Helm.",
+        "Visual LangGraph IDE — design agent workflows on a canvas with skills, guardrails, RAG pipelines, and multi-intent routing. Download the langtailor-canvas VSX extension or LangTailor desktop IDE. Export Python 3.13 projects.",
       keywords:
-        "LangStitch, LangTailor, LangGraph SDK, LangGraph IDE, visual agent builder, LangGraph canvas, RAG pipeline designer, Python export, LangSmith, MCP Studio, agent guardrails, multi-intent classifier",
+        "LangStitch, LangGraph IDE, VSX extension, langtailor-canvas, Open VSX, LangTailor desktop, visual agent builder, LangGraph canvas, SDK component designer, Python export, LangSmith",
       type: "website",
       jsonLd: [
         {
@@ -23,7 +25,7 @@
           name: SITE_NAME,
           url: SITE_URL + "/",
           description:
-            "Visual drag-and-drop IDE for LangGraph — skills, guardrails, RAG, and production Python export.",
+            "Visual drag-and-drop IDE for LangGraph — downloadable VSX extension and LangTailor desktop.",
           inLanguage: "en-US",
           publisher: {
             "@type": "Organization",
@@ -45,14 +47,14 @@
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "LangTailor",
+          name: SITE_NAME,
           applicationCategory: "DeveloperApplication",
-          operatingSystem: "Windows, macOS",
+          operatingSystem: "Windows, macOS, Linux",
           description:
-            "LangTailor desktop IDE for LangGraph — visual canvas, asset designers, RAG pipelines, and Python 3.13 multi-module export. Built on the LangStitch SDK.",
-          url: "https://langtailor.langstitch.com/",
-          downloadUrl: "https://langtailor.langstitch.com/",
-          softwareVersion: "0.1.2",
+            "Downloadable VS Code extension and LangTailor desktop IDE for LangGraph — asset designers, RAG pipelines, Python 3.13 export.",
+          url: LANGTAILOR_URL,
+          downloadUrl: OPENVSX_URL,
+          softwareVersion: "0.1.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Person", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
@@ -60,10 +62,10 @@
       ]
     },
     "try.html": {
-      title: "Download LangTailor — the LangGraph desktop IDE",
+      title: "Download LangStitch — VSX extension & LangTailor",
       description:
-        "Get LangTailor, the desktop LangGraph IDE for Windows and macOS — visual canvas, export, Git sync, and platform features.",
-      keywords: "LangTailor download, LangGraph IDE, desktop agent builder, LangStitch SDK",
+        "Download the LangStitch canvas VSX extension or LangTailor desktop IDE. No hosted browser IDE.",
+      keywords: "LangStitch download, VSX, Open VSX, LangTailor, LangGraph IDE",
       type: "website"
     }
   };
@@ -120,7 +122,7 @@
   if (!page) return;
 
   var canonical =
-    fn === "index.html" ? SITE_URL + "/" : SITE_URL + "/" + fn;
+    fn === "index.html" ? SITE_URL + "/" : fn === "try.html" ? LANGTAILOR_URL : SITE_URL + "/" + fn;
 
   document.title = page.title;
   upsertMeta("description", page.description);
