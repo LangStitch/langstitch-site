@@ -6,7 +6,7 @@ Marketing site and documentation for the LangStitch ecosystem: the **LangStitch 
 - **Live:** https://langstitch.com
 - **Docs:** https://langstitch.com/docs/
 - **LangTailor (desktop IDE):** https://langtailor.langstitch.com
-- **SDK:** https://github.com/LangStitch/langstitch-sdk
+- **SDK:** https://pypi.org/project/langstitch/ · docs at https://sdk.langstitch.com/
 
 ## Structure
 

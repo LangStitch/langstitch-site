@@ -54,18 +54,16 @@
           <a class="btn btn-primary" href="https://langtailor.langstitch.com">Download VSX →</a>
         </article>
         <article class="card card-highlight">
-          <h3>Docker (full stack)</h3>
-          <pre><code>git clone https://github.com/LangStitch/langtailor.git
-cd LangStitch
-docker compose -f docker-compose.prod.yml up</code></pre>
-          <p>UI + Platform API at <strong>http://localhost:8080</strong></p>
+          <h3>Platform API (Docker)</h3>
+          <pre><code>docker run -p 8787:8787 \
+  ghcr.io/langstitch/langstitch-api:latest</code></pre>
+          <p>Platform API at <strong>http://localhost:8787</strong></p>
         </article>
         <article class="card card-highlight">
-          <h3>Local dev</h3>
-          <pre><code>npm install
-pip install -r server/requirements.txt
-npm start</code></pre>
-          <p>UI at <strong>http://localhost:5173</strong>, API at <strong>:8787</strong></p>
+          <h3>SDK (PyPI)</h3>
+          <pre><code>pip install langstitch
+langstitch new my-agent</code></pre>
+          <p>Build LangGraph apps with the Python SDK</p>
         </article>
       </div>
     </section>
@@ -119,10 +117,7 @@ npm start</code></pre>
       <pre><code># pick what you need
 pip install langstitch                               # core only
 pip install "langstitch[server,graph,llm,http]"      # typical agent service
-pip install "langstitch[all]"                        # everything
-
-# pin from Git until the PyPI release is live
-pip install "langstitch @ git+https://github.com/LangStitch/langstitch-sdk.git"</code></pre>
+pip install "langstitch[all]"                        # everything</code></pre>
       <p class="section-lead">
         <strong>Design note:</strong> importing <code>langstitch</code> never imports FastAPI, LangGraph,
         LangChain, or httpx. Each helper imports its dependency lazily and raises a clear, actionable
@@ -468,8 +463,8 @@ CMD ["langstitch", "run", "--host", "0.0.0.0", "--port", "8000"]</code></pre>
       </div>
       <p class="section-lead">
         Exhaustive signatures and options live in the
-        <a href="https://github.com/LangStitch/langstitch-sdk/blob/main/README.md">SDK README</a>
-        and source under <code>sdk/src/langstitch/</code>.
+        <a href="https://sdk.langstitch.com/">SDK docs</a>
+        and the <code>langstitch</code> package on PyPI.
       </p>
 
       <h3 id="guide-troubleshooting" class="guide-step">10 · Troubleshooting</h3>

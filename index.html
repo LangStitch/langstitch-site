@@ -77,17 +77,16 @@
           </ul>
           <div class="start-cards">
             <article class="start-card">
-              <h3>Docker</h3>
-              <pre><code>git clone https://github.com/LangStitch/langtailor.git
-cd LangStitch
-docker compose -f docker-compose.prod.yml up</code></pre>
-              <p>→ <strong>http://localhost:8080</strong></p>
+              <h3>Platform API (Docker)</h3>
+              <pre><code>docker run -p 8787:8787 \
+  ghcr.io/langstitch/langstitch-api:latest</code></pre>
+              <p>→ <strong>http://localhost:8787</strong></p>
             </article>
             <article class="start-card">
-              <h3>Local dev</h3>
-              <pre><code>npm install && pip install -r server/requirements.txt
-npm start</code></pre>
-              <p>→ <strong>http://localhost:5173</strong></p>
+              <h3>LangTailor desktop</h3>
+              <pre><code># install the extension from Open VSX
+codium --install-extension langstitch.langtailor-canvas</code></pre>
+              <p>→ <a href="https://langtailor.langstitch.com/">Download LangTailor</a></p>
             </article>
           </div>
         </div>
@@ -299,8 +298,6 @@ def http_1(state: State) -&gt; dict:
             <pre><code>pip install langstitch
 # with extras:
 pip install "langstitch[server,graph,llm,http]"</code></pre>
-            <p>Or pin it straight from Git before the PyPI release:</p>
-            <pre><code>langstitch @ git+https://github.com/LangStitch/langstitch-sdk.git</code></pre>
           </article>
 
           <article class="sdk-card">
@@ -356,8 +353,8 @@ class Server:
         </div>
 
         <div class="sdk-actions">
-          <a class="btn btn-primary" href="https://github.com/LangStitch/langstitch-sdk">SDK on GitHub</a>
-          <a class="btn btn-secondary" href="https://github.com/LangStitch/langstitch-sdk/blob/main/README.md">Read the SDK README</a>
+          <a class="btn btn-primary" href="https://pypi.org/project/langstitch/">SDK on PyPI</a>
+          <a class="btn btn-secondary" href="https://sdk.langstitch.com/">Read the SDK docs</a>
         </div>
       </div>
     </div>
