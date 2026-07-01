@@ -25,6 +25,7 @@
       <a href="https://langtailor.langstitch.com">LangTailor</a>
       <a href="https://marketplace.langstitch.com">Marketplace</a>
       <a href="#compare">Compare</a>
+      <a href="docs/">Docs</a>
       <a class="nav-cta" href="https://langtailor.langstitch.com">Download VSX</a>
     </div>
   </nav>
@@ -40,7 +41,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://langtailor.langstitch.com">Download LangTailor</a>
         <a class="btn btn-secondary" href="https://open-vsx.org/extension/langstitch/langtailor-canvas">Install VSX</a>
-        <a class="btn btn-secondary" href="https://github.com/LangStitch">GitHub</a>
+        <a class="btn btn-secondary" href="https://github.com/LangStitch/langtailor">GitHub</a>
       </div>
       <div class="hero-badges">
         <span>LangGraph</span>
@@ -67,7 +68,7 @@
           </p>
           <div class="start-actions">
             <a class="btn btn-primary" href="https://langtailor.langstitch.com">Download &amp; install</a>
-            <a class="btn btn-secondary" href="https://sdk.langstitch.com">Read the docs</a>
+            <a class="btn btn-secondary" href="docs/">Read docs</a>
           </div>
           <ul class="start-steps">
             <li><strong>VSX / Open VSX</strong> — <code>codium --install-extension langstitch.langtailor-canvas</code></li>
@@ -76,16 +77,17 @@
           </ul>
           <div class="start-cards">
             <article class="start-card">
-              <h3>Platform API (Docker)</h3>
-              <pre><code>docker run -p 8787:8787 \
-  ghcr.io/langstitch/langstitch-api:latest</code></pre>
-              <p>→ <strong>http://localhost:8787</strong></p>
+              <h3>Docker</h3>
+              <pre><code>git clone https://github.com/LangStitch/langtailor.git
+cd LangStitch
+docker compose -f docker-compose.prod.yml up</code></pre>
+              <p>→ <strong>http://localhost:8080</strong></p>
             </article>
             <article class="start-card">
-              <h3>LangTailor desktop</h3>
-              <pre><code># install the extension from Open VSX
-codium --install-extension langstitch.langtailor-canvas</code></pre>
-              <p>→ <a href="https://langtailor.langstitch.com/">Download LangTailor</a></p>
+              <h3>Local dev</h3>
+              <pre><code>npm install && pip install -r server/requirements.txt
+npm start</code></pre>
+              <p>→ <strong>http://localhost:5173</strong></p>
             </article>
           </div>
         </div>
@@ -169,7 +171,7 @@ codium --install-extension langstitch.langtailor-canvas</code></pre>
         <article class="card">
           <div class="card-icon">🖥️</div>
           <h3>LangTailor desktop</h3>
-          <p>The downloadable LangGraph IDE — a branded VS&nbsp;Code / Code-OSS build with the canvas, Python export, and marketplace sync built in. <a href="https://langtailor.langstitch.com">Get LangTailor →</a></p>
+          <p>The downloadable LangGraph IDE — a custom Electron workspace with canvas/code views, Python export, build/run, and marketplace sync built in. <a href="https://langtailor.langstitch.com">Get LangTailor →</a></p>
         </article>
         <article class="card">
           <div class="card-icon">✓</div>
@@ -294,9 +296,11 @@ def http_1(state: State) -&gt; dict:
         <div class="sdk-grid">
           <article class="sdk-card">
             <h4>Install</h4>
-            <pre><code>pip install langstitch-sdk
+            <pre><code>pip install langstitch
 # with extras:
-pip install "langstitch-sdk[server,graph,llm,http]"</code></pre>
+pip install "langstitch[server,graph,llm,http]"</code></pre>
+            <p>Or pin it straight from Git before the PyPI release:</p>
+            <pre><code>langstitch-sdk @ git+https://github.com/LangStitch/langstitch-sdk.git</code></pre>
           </article>
 
           <article class="sdk-card">
@@ -352,8 +356,8 @@ class Server:
         </div>
 
         <div class="sdk-actions">
-          <a class="btn btn-primary" href="https://pypi.org/project/langstitch-sdk/">SDK on PyPI</a>
-          <a class="btn btn-secondary" href="https://sdk.langstitch.com/">Read the SDK docs</a>
+          <a class="btn btn-primary" href="https://github.com/LangStitch/langstitch-sdk">SDK on GitHub</a>
+          <a class="btn btn-secondary" href="https://github.com/LangStitch/langstitch-sdk/blob/main/README.md">Read the SDK README</a>
         </div>
       </div>
     </div>
@@ -606,8 +610,8 @@ class Server:
   <footer class="footer">
     <p>
       LangStitch · MIT License ·
-      <a href="https://github.com/LangStitch">GitHub</a> ·
-      <a href="https://sdk.langstitch.com">Documentation</a> ·
+      <a href="https://github.com/LangStitch/langtailor">GitHub</a> ·
+      <a href="docs/">Documentation</a> ·
       <a href="https://langtailor.langstitch.com">Download VSX</a> ·
       <a href="https://langtailor.langstitch.com">LangTailor</a> ·
       <a href="https://marketplace.langstitch.com">Marketplace</a> ·

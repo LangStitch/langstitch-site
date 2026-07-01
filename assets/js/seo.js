@@ -3,8 +3,8 @@
   var SITE_PATH = "";
   var SITE_URL = SITE_ORIGIN + SITE_PATH;
   var SITE_NAME = "LangStitch";
-  var TWITTER = "";
-  var AUTHOR = "Vijay Prakash Tiwari";
+  var TWITTER = "@LangStitch";
+  var AUTHOR = "LangStitch";
   var EMAIL = "connect@langstitch.com";
   var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/photos/hero.png";
   var LANGTAILOR_URL = "https://langtailor.langstitch.com/";
@@ -56,7 +56,7 @@
           downloadUrl: OPENVSX_URL,
           softwareVersion: "0.1.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          author: { "@type": "Person", name: AUTHOR, email: EMAIL },
+          author: { "@type": "Organization", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
         }
       ]
