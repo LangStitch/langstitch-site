@@ -23,8 +23,29 @@ robots.txt      Crawler directives
 
 ## Deploy
 
-Static site, published to GitHub Pages on every push to `main` via
-`.github/workflows/pages.yml`. No build step — files are served as-is.
+Static site, published on every push to `main`:
+
+| Target | Workflow | Live URL |
+|--------|----------|----------|
+| GitHub Pages | `.github/workflows/pages.yml` | https://langstitch.com (CNAME) |
+| Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | https://langstitch.com + https://sdk.langstitch.com |
+
+No build step — files are served as-is.
+
+### Hostinger secrets (this repo)
+
+| Secret | Purpose |
+|--------|---------|
+| `FTP_SERVER` | FTP IP from hPanel → Plan Details |
+| `FTP_USERNAME` | FTP account username |
+| `FTP_PASSWORD` | FTP account password |
+
+| Variable | Default |
+|----------|---------|
+| `FTP_SERVER_DIR` | `domains/langstitch.com/public_html/` |
+| `SDK_SERVER_DIR` | `domains/sdk.langstitch.com/public_html/` |
+
+Use the same FTP credentials across all LangStitch site repos on this Hostinger account.
 
 ## Local preview
 
