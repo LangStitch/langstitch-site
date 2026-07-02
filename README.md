@@ -36,7 +36,7 @@ No build step — files are served as-is.
 
 | Secret | Value |
 |--------|--------|
-| `FTP_SERVER` | `ftp.langstitch.com` (or FTP IP from hPanel Plan Details) |
+| `FTP_SERVER` | `ftpupload.net` (Hostinger FTP host — `ftp.langstitch.com` often has no public DNS) |
 | `FTP_USERNAME` | `u743467360.langstitchdeveloper` |
 | `FTP_PASSWORD` | FTP password for that account |
 | `SDK_FTP_USERNAME` | `u743467360.sdkdeveloper` |
