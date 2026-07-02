@@ -1,14 +1,13 @@
 name: Deploy to Hostinger
 
 # Publishes langstitch.com to Hostinger over FTPS.
-# FTP account u743467360.langstitchdeveloper is scoped to the langstitch.com docroot (deploy to ./).
+# The scoped FTP account lands above the live docroot — static files go to
+# public_html/ and hostinger-root.htaccess is published as /.htaccess to rewrite.
 #
 # Required secrets:
-#   FTP_SERVER    - 217.21.84.75 (Hostinger FTP IP — no ftp:// prefix)
+#   FTP_SERVER    - 217.21.84.75
 #   FTP_USERNAME  - u743467360.langstitchdeveloper
 #   FTP_PASSWORD  - FTP account password
-# Optional variable:
-#   FTP_SERVER_DIR - default ./
 
 on:
   push:
@@ -35,7 +34,7 @@ jobs:
         if: steps.ftp.outputs.configured == 'true'
         uses: actions/checkout@v7
 
-      - name: Deploy main site via FTPS
+      - name: Deploy site files to public_html
         if: steps.ftp.outputs.configured == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -43,14 +42,35 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          server-dir: public_html/
           timeout: 120000
-          state-name: langstitch-webroot-v1
+          state-name: langstitch-public-html
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             README.md
+            hostinger-root.htaccess
+            .htaccess
+
+      - name: Prepare account-root rewrite
+        if: steps.ftp.outputs.configured == 'true'
+        run: |
+          mkdir -p _hostinger-root
+          cp hostinger-root.htaccess _hostinger-root/.htaccess
+
+      - name: Deploy account-root rewrite
+        if: steps.ftp.outputs.configured == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: _hostinger-root/
+          server-dir: ./
+          timeout: 120000
+          state-name: langstitch-root-rewrite
 
       - name: Verify live site
         if: steps.ftp.outputs.configured == 'true'

@@ -1,6 +1,0 @@
-# LiteSpeed / Hostinger — avoid stale HTML while iterating on deploys
-<IfModule mod_headers.c>
-  <FilesMatch "\.(html?|css|js|svg|xml)$">
-    Header set Cache-Control "public, max-age=300, must-revalidate"
-  </FilesMatch>
-</IfModule>
