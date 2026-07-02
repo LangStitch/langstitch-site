@@ -1,7 +1,7 @@
 name: Deploy to Hostinger
 
-# Mirror to Hostinger public_html/ (scoped FTP account). Primary delivery is GitHub Pages.
-# The live docroot for langstitch.com is outside this FTP account — use GitHub Pages DNS.
+# Publishes langstitch.com to Hostinger over FTPS.
+# FTP account u743467360.langstitchdeveloper is scoped to the domain docroot (deploy to ./).
 
 on:
   push:
@@ -28,9 +28,8 @@ jobs:
         if: steps.ftp.outputs.configured == 'true'
         uses: actions/checkout@v7
 
-      - name: Deploy site files to public_html
+      - name: Deploy site files to domain root
         if: steps.ftp.outputs.configured == 'true'
-        continue-on-error: true
         id: ftps
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -38,9 +37,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: public_html/
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
           timeout: 120000
-          state-name: langstitch-public-html-v2
+          state-name: langstitch-domain-root-v1
           exclude: |
             **/.git*
             **/.git*/**
@@ -49,18 +48,19 @@ jobs:
             hostinger-root.htaccess
             .nojekyll
 
-      - name: Verify Hostinger mirror
+      - name: Verify live site
         if: steps.ftp.outputs.configured == 'true' && steps.ftps.outcome == 'success'
         run: |
           set -euo pipefail
-          URL="https://langstitch.com/public_html/index.html"
+          URL="https://langstitch.com/"
           for i in 1 2 3 4 5 6; do
             BODY="$(curl -fsSL --compressed -H "Cache-Control: no-cache" "$URL" 2>/dev/null || true)"
             if echo "$BODY" | grep -q 'hero--xtra'; then
-              echo "Hostinger mirror OK at $URL (attempt $i)."
+              echo "Live site OK at $URL (attempt $i)."
               exit 0
             fi
-            echo "Waiting for Hostinger mirror (attempt $i/6)…"
+            echo "Waiting for langstitch.com to update (attempt $i/6)…"
             sleep 15
           done
-          echo "::warning::Hostinger mirror not verified at $URL — primary delivery is GitHub Pages. Point langstitch.com DNS to GitHub Pages (see README)."
+          echo "::error::langstitch.com did not serve the new build after deploy."
+          exit 1
