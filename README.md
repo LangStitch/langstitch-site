@@ -34,18 +34,15 @@ No build step — files are served as-is.
 
 ### Hostinger secrets (this repo)
 
-| Secret | Purpose |
-|--------|---------|
-| `FTP_SERVER` | FTP IP from hPanel → Plan Details |
-| `FTP_USERNAME` | FTP account username |
-| `FTP_PASSWORD` | FTP account password |
+| Secret | Value |
+|--------|--------|
+| `FTP_SERVER` | `ftp.langstitch.com` (or FTP IP from hPanel Plan Details) |
+| `FTP_USERNAME` | `u743467360.langstitchdeveloper` |
+| `FTP_PASSWORD` | FTP password for that account |
+| `SDK_FTP_USERNAME` | `u743467360.sdkdeveloper` |
+| `SDK_FTP_PASSWORD` | FTP password for SDK account |
 
-| Variable | Default |
-|----------|---------|
-| `FTP_SERVER_DIR` | `domains/langstitch.com/public_html/` |
-| `SDK_SERVER_DIR` | `domains/sdk.langstitch.com/public_html/` |
-
-Use the same FTP credentials across all LangStitch site repos on this Hostinger account.
+Each subdomain has its own scoped FTP user in hPanel. Deploy targets `./` (account root).
 
 ## Local preview
 
