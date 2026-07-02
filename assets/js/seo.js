@@ -6,17 +6,17 @@
   var TWITTER = "@LangStitch";
   var AUTHOR = "LangStitch";
   var EMAIL = "connect@langstitch.com";
-  var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/photos/hero.png";
+  var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/og-card.svg";
   var LANGTAILOR_URL = "https://langtailor.langstitch.com/";
   var OPENVSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
 
   var PAGES = {
     "index.html": {
-      title: "LangStitch — Visual LangGraph IDE | Download VSX & LangTailor",
+      title: "LangStitch — Visual LangGraph Platform · Multi-language Export",
       description:
-        "Visual LangGraph IDE — design agent workflows on a canvas with skills, guardrails, RAG pipelines, and multi-intent routing. Download the langtailor-canvas VSX extension or LangTailor desktop IDE. Export Python 3.13 projects.",
+        "The agent engineering platform — visual LangGraph canvas, multi-language SDK (Python, Spring AI, Go, Rust), Component Designer, marketplace, and LangTailor IDE. Design once, export to your stack.",
       keywords:
-        "LangStitch, LangGraph IDE, VSX extension, langtailor-canvas, Open VSX, LangTailor desktop, visual agent builder, LangGraph canvas, SDK component designer, Python export, LangSmith",
+        "LangStitch, LangGraph platform, agent engineering, visual canvas, multi-language export, Spring AI agents, Go agents, Rust agents, Python export, SDK, marketplace, LangTailor, RAG, guardrails, Component Designer",
       type: "website",
       jsonLd: [
         {
@@ -25,7 +25,7 @@
           name: SITE_NAME,
           url: SITE_URL + "/",
           description:
-            "Visual drag-and-drop IDE for LangGraph — downloadable VSX extension and LangTailor desktop.",
+            "Visual LangGraph platform — canvas, multi-language SDK, marketplace, and LangTailor IDE. Export Python, Spring AI, Go, and Rust.",
           inLanguage: "en-US",
           publisher: {
             "@type": "Organization",
@@ -51,13 +51,46 @@
           applicationCategory: "DeveloperApplication",
           operatingSystem: "Windows, macOS, Linux",
           description:
-            "Downloadable VS Code extension and LangTailor desktop IDE for LangGraph — asset designers, RAG pipelines, Python 3.13 export.",
+            "Agent engineering platform — visual canvas, Component Designer, multi-language SDK, marketplace, and LangTailor IDE. Export Python, Spring AI, Go, and Rust.",
+          featureList: [
+            "Visual LangGraph canvas",
+            "Multi-language export",
+            "Python SDK on PyPI",
+            "Spring AI export",
+            "Go and Rust export",
+            "Component Designer",
+            "Marketplace"
+          ],
           url: LANGTAILOR_URL,
           downloadUrl: OPENVSX_URL,
           softwareVersion: "0.1.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Organization", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What languages can LangStitch export to?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "LangStitch and LangTailor export production projects for Python (available now on PyPI), Spring AI (Java), Go, and Rust from the same visual canvas and project format."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Is LangStitch only a Python tool?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "No. LangStitch is a multi-language agent engineering platform. The Python SDK ships today; Spring AI, Go, and Rust runtimes share the same graphs/, skills/, guardrails/, and deploy/ layout exported from LangTailor."
+              }
+            }
+          ]
         }
       ]
     },
