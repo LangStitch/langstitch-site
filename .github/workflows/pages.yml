@@ -24,7 +24,7 @@ jobs:
       - name: Assemble static site
         run: |
           mkdir _site
-          cp index.html try.html styles.css sitemap.xml robots.txt CNAME _site/
+          cp index.html try.html styles.css sitemap.xml robots.txt CNAME .htaccess _site/
           cp -r assets _site/assets
           cp -r docs _site/docs
 
