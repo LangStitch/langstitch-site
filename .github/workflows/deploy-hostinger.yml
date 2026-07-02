@@ -3,6 +3,7 @@ name: Deploy to Hostinger
 # Publishes langstitch.com to Hostinger over FTPS.
 # FTP account u743467360.langstitchdeveloper is scoped to the domain docroot (deploy to ./).
 # Hostinger serves the parent folder at /; hostinger-webroot.htaccess rewrites into ./.
+# Never use dangerous-clean-slate — sibling subdomains (langtailor, sdk) live alongside this tree.
 
 on:
   push:
@@ -44,7 +45,6 @@ jobs:
           set ftp:ssl-force true
           set ssl:verify-certificate no
           cd ..
-          rm -f index.html styles.css
           put hostinger-webroot.htaccess -o .htaccess
           bye
           EOF
