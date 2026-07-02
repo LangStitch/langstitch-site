@@ -1,88 +1,51 @@
-name: Deploy to Hostinger
-
-# Publishes langstitch.com (+ sdk.langstitch.com) to Hostinger over FTPS.
-# Each target uses its own scoped FTP account (hPanel → FTP Accounts).
-#
-# Main site secrets:
-#   FTP_SERVER    - 217.21.84.75 (Hostinger FTP IP — no ftp:// prefix)
-# SDK subdomain secrets:
-#   SDK_FTP_USERNAME (u743467360.sdkdeveloper), SDK_FTP_PASSWORD
-# Optional variables:
-#   FTP_SERVER_DIR, SDK_SERVER_DIR — default ./ (FTP account is already scoped to docroot)
-
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  deploy-main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check FTP configuration
-        id: ftp
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        run: |
-          if [ -z "$FTP_SERVER" ]; then
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Skipping main site Hostinger deploy — FTP secrets not configured."
-          else
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Checkout
-        if: steps.ftp.outputs.configured == 'true'
-        uses: actions/checkout@v7
-
-      - name: Deploy main site via FTPS
-        if: steps.ftp.outputs.configured == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
-            sdk/**
-
-  deploy-sdk:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check SDK FTP configuration
-        id: ftp
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          SDK_FTP_USERNAME: ${{ secrets.SDK_FTP_USERNAME }}
-        run: |
-          if [ -z "$FTP_SERVER" ] || [ -z "$SDK_FTP_USERNAME" ]; then
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Skipping SDK Hostinger deploy — SDK FTP secrets not configured."
-          else
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Checkout
-        if: steps.ftp.outputs.configured == 'true'
-        uses: actions/checkout@v7
-
-      - name: Deploy SDK docs to sdk.langstitch.com via FTPS
-        if: steps.ftp.outputs.configured == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.SDK_FTP_USERNAME }}
-          password: ${{ secrets.SDK_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./sdk/
-          server-dir: ${{ vars.SDK_SERVER_DIR || './' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
+name: Deploy to Hostinger
+
+# Publishes langstitch.com to Hostinger over FTPS.
+# FTP account is scoped to the langstitch.com docroot (deploy to ./).
+#
+# Required secrets:
+#   FTP_SERVER    - 217.21.84.75 (Hostinger FTP IP — no ftp:// prefix)
+#   FTP_USERNAME  - u743467360.langstitchdeveloper
+#   FTP_PASSWORD  - FTP account password
+# Optional variable:
+#   FTP_SERVER_DIR - default ./
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check FTP configuration
+        id: ftp
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping Hostinger deploy — FTP secrets are not configured."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.ftp.outputs.configured == 'true'
+        uses: actions/checkout@v7
+
+      - name: Deploy main site via FTPS
+        if: steps.ftp.outputs.configured == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md

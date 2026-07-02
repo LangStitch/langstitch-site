@@ -1,12 +1,11 @@
 # LangStitch — Product Website
 
-Marketing site and documentation for the LangStitch ecosystem: the **LangStitch SDK**
-(code-first LangGraph) and the **LangTailor** desktop IDE.
+Marketing site for the LangStitch ecosystem and the **LangTailor** desktop IDE.
 
 - **Live:** https://langstitch.com
-- **Docs:** https://langstitch.com/docs/
+- **Docs redirect:** https://langstitch.com/docs/ → https://sdk.langstitch.com
 - **LangTailor (desktop IDE):** https://langtailor.langstitch.com
-- **SDK:** https://pypi.org/project/langstitch/ · docs at https://sdk.langstitch.com/
+- **SDK docs:** https://sdk.langstitch.com (repo: `langstitch-sdk-site`)
 
 ## Structure
 
@@ -15,7 +14,7 @@ index.html      Landing page
 try.html        Redirect to the LangTailor download
 styles.css      Site styles
 assets/         JS (SEO/structured data) and media
-docs/           Documentation + SDK user guide
+docs/           Redirect to sdk.langstitch.com
 CNAME           Custom domain (langstitch.com)
 sitemap.xml     Sitemap
 robots.txt      Crawler directives
@@ -28,7 +27,7 @@ Static site, published on every push to `main`:
 | Target | Workflow | Live URL |
 |--------|----------|----------|
 | GitHub Pages | `.github/workflows/pages.yml` | https://langstitch.com (CNAME) |
-| Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | https://langstitch.com + https://sdk.langstitch.com |
+| Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | https://langstitch.com |
 
 No build step — files are served as-is.
 
@@ -39,10 +38,8 @@ No build step — files are served as-is.
 | `FTP_SERVER` | `217.21.84.75` (Hostinger FTP IP — use the IP only, no `ftp://` prefix) |
 | `FTP_USERNAME` | `u743467360.langstitchdeveloper` |
 | `FTP_PASSWORD` | FTP password for that account |
-| `SDK_FTP_USERNAME` | `u743467360.sdkdeveloper` |
-| `SDK_FTP_PASSWORD` | FTP password for SDK account |
 
-Each subdomain has its own scoped FTP user in hPanel. Deploy targets `./` (account root).
+Deploy targets `./` (account root).
 
 ## Local preview
 
