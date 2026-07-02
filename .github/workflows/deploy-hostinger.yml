@@ -4,7 +4,7 @@ name: Deploy to Hostinger
 # Each target uses its own scoped FTP account (hPanel → FTP Accounts).
 #
 # Main site secrets:
-#   FTP_SERVER, FTP_USERNAME (u743467360.langstitchdeveloper), FTP_PASSWORD
+#   FTP_SERVER    - 217.21.84.75 (Hostinger FTP IP — no ftp:// prefix)
 # SDK subdomain secrets:
 #   SDK_FTP_USERNAME (u743467360.sdkdeveloper), SDK_FTP_PASSWORD
 # Optional variables:
