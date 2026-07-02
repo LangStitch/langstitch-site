@@ -14,8 +14,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  repository_dispatch:
-    types: [deploy-langtailor]
 
 jobs:
   deploy:
@@ -50,25 +48,3 @@ jobs:
           protocol: ftps
           local-dir: ./sdk/
           server-dir: ${{ vars.SDK_SERVER_DIR || 'sdk/' }}
-
-      - name: Checkout langtailor-site
-        uses: actions/checkout@v7
-        with:
-          repository: LangStitch/langtailor-site
-          path: langtailor-site
-
-      # langtailor.langstitch.com — uses the same Hostinger FTP account as langstitch.com.
-      - name: Deploy LangTailor site to langtailor subdomain via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./langtailor-site/
-          server-dir: ${{ vars.LANGTAILOR_SERVER_DIR || 'domains/langtailor.langstitch.com/public_html/' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
