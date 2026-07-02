@@ -61,8 +61,8 @@
             "Component Designer",
             "Marketplace"
           ],
-          url: LANGTAILOR_URL,
-          downloadUrl: OPENVSX_URL,
+          url: SITE_URL + "/",
+          downloadUrl: LANGTAILOR_URL,
           softwareVersion: "0.1.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Organization", name: AUTHOR, email: EMAIL },

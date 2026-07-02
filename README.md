@@ -41,6 +41,8 @@ No build step — files are served as-is.
 
 Deploy targets `./` (the FTP account root). Hostinger serves the parent web folder at `/`; `hostinger-webroot.htaccess` rewrites requests into the FTP folder.
 
+**LangTailor site content** lives only in `langtailor-site` (https://langtailor.langstitch.com). Do not copy langtailor pages or assets into this repo — the Hostinger deploy excludes `langtailor/**` and `sdk/**` so sibling subdomains are never overwritten.
+
 ## Local preview
 
 ```bash

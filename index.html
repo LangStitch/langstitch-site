@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
   <script src="assets/js/seo.js" defer></script>
   <script src="assets/js/features.js" defer></script>
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
   <nav class="nav">
@@ -45,9 +45,8 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
-      <a href="#workflow">Workflow</a>
+      <a href="#ecosystem">Ecosystem</a>
       <a href="#features">Features</a>
-      <a href="#choose">Get started</a>
       <a href="https://sdk.langstitch.com">SDK</a>
       <a href="https://langtailor.langstitch.com">LangTailor</a>
       <a href="https://marketplace.langstitch.com">Marketplace</a>
@@ -101,144 +100,6 @@
           </div>
         </div>
 
-        <div class="ide-frame" aria-hidden="true">
-          <div class="ide-frame__toolbar">
-            <div class="ide-frame__brand">
-              <svg class="ide-frame__logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <rect x="2" y="2" width="28" height="28" rx="8" fill="#4f46e5"/>
-                <circle cx="10" cy="11" r="2.4" fill="#c7d2fe"/>
-                <circle cx="22" cy="11" r="2.4" fill="#a5b4fc"/>
-                <circle cx="16" cy="22" r="2.4" fill="#818cf8"/>
-                <path d="M10 11 C 13 16, 19 16, 22 11" stroke="#e0e7ff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-              </svg>
-              <div class="ide-frame__brand-text">
-                <strong>LangStitch</strong>
-                <span>Agent canvas</span>
-              </div>
-            </div>
-            <div class="ide-frame__graph">
-              <div class="ide-frame__graph-label">Graph</div>
-              <div class="ide-frame__graph-name">billing-agent.langstitch</div>
-            </div>
-            <div class="ide-frame__actions">
-              <span class="ide-frame__btn">Build</span>
-              <span class="ide-frame__btn ide-frame__btn--accent">Run</span>
-              <span class="ide-frame__btn">Export</span>
-            </div>
-          </div>
-          <div class="ide-frame__workspace">
-            <aside class="ide-frame__palette">
-              <div class="ide-frame__panel-title">Node library</div>
-              <div class="ide-frame__palette-item">
-                <span class="ide-frame__palette-icon" style="color:#a78bfa">LLM</span>
-                <span>LLM</span>
-              </div>
-              <div class="ide-frame__palette-item ide-frame__palette-item--active">
-                <span class="ide-frame__palette-icon" style="color:#818cf8">RAG</span>
-                <span>RAG Agent</span>
-              </div>
-              <div class="ide-frame__palette-item">
-                <span class="ide-frame__palette-icon" style="color:#fbbf24">T</span>
-                <span>Tool</span>
-              </div>
-              <div class="ide-frame__palette-item">
-                <span class="ide-frame__palette-icon" style="color:#2dd4bf">A</span>
-                <span>Agent</span>
-              </div>
-            </aside>
-            <div class="ide-frame__canvas">
-              <svg class="ide-frame__graph-svg" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                <defs>
-                  <pattern id="ide-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r="0.6" fill="rgba(255,255,255,0.05)"/>
-                  </pattern>
-                </defs>
-                <rect width="520" height="320" fill="url(#ide-grid)"/>
-
-                <g class="ide-graph-edges">
-                  <path d="M 124 110 L 140 110" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                  <path d="M 270 110 L 292 110" stroke="#818cf8" stroke-width="1.5" fill="none"/>
-                  <path d="M 205 128 L 205 148 L 210 168" stroke="#818cf8" stroke-width="1.5" fill="none"/>
-                  <path d="M 264 186 C 295 186, 325 155, 347 128" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
-                  <path d="M 402 110 L 426 110" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                </g>
-
-                <g class="ide-graph-node ide-graph-node--start" transform="translate(28, 92)">
-                  <rect class="ide-graph-node__box" width="96" height="36" rx="6"/>
-                  <rect class="ide-graph-node__bar" width="3" height="36" rx="1"/>
-                  <rect class="ide-graph-node__icon" x="10" y="8" width="20" height="20" rx="4"/>
-                  <text class="ide-graph-node__icon-text" x="20" y="22">▶</text>
-                  <text class="ide-graph-node__type" x="36" y="16">Entry</text>
-                  <text class="ide-graph-node__title" x="36" y="28">Start</text>
-                </g>
-
-                <g class="ide-graph-node ide-graph-node--rag ide-graph-node--selected" transform="translate(140, 72)">
-                  <rect class="ide-graph-node__box" width="130" height="56" rx="6"/>
-                  <rect class="ide-graph-node__bar" width="3" height="56" rx="1"/>
-                  <rect class="ide-graph-node__icon" x="10" y="8" width="20" height="20" rx="4"/>
-                  <text class="ide-graph-node__icon-text" x="20" y="22">R</text>
-                  <text class="ide-graph-node__type" x="36" y="16">RAG</text>
-                  <text class="ide-graph-node__title" x="36" y="28">Knowledge retrieval</text>
-                  <text class="ide-graph-node__body" x="10" y="46">Hybrid · vector + BM25</text>
-                </g>
-
-                <g class="ide-graph-node ide-graph-node--llm" transform="translate(292, 92)">
-                  <rect class="ide-graph-node__box" width="110" height="36" rx="6"/>
-                  <rect class="ide-graph-node__bar" width="3" height="36" rx="1"/>
-                  <rect class="ide-graph-node__icon" x="10" y="8" width="20" height="20" rx="4"/>
-                  <text class="ide-graph-node__icon-text" x="20" y="22">AI</text>
-                  <text class="ide-graph-node__type" x="36" y="16">LLM</text>
-                  <text class="ide-graph-node__title" x="36" y="28">Answer · Skills</text>
-                </g>
-
-                <g class="ide-graph-node ide-graph-node--tool" transform="translate(156, 168)">
-                  <rect class="ide-graph-node__box" width="108" height="36" rx="6"/>
-                  <rect class="ide-graph-node__bar" width="3" height="36" rx="1"/>
-                  <rect class="ide-graph-node__icon" x="10" y="8" width="20" height="20" rx="4"/>
-                  <text class="ide-graph-node__icon-text" x="20" y="22">T</text>
-                  <text class="ide-graph-node__type" x="36" y="16">Tool</text>
-                  <text class="ide-graph-node__title" x="36" y="28">Invoice API</text>
-                </g>
-
-                <g class="ide-graph-node ide-graph-node--end" transform="translate(426, 92)">
-                  <rect class="ide-graph-node__box" width="68" height="36" rx="6"/>
-                  <rect class="ide-graph-node__bar" width="3" height="36" rx="1"/>
-                  <rect class="ide-graph-node__icon" x="10" y="8" width="20" height="20" rx="4"/>
-                  <text class="ide-graph-node__icon-text" x="20" y="22">■</text>
-                  <text class="ide-graph-node__type" x="36" y="16">Exit</text>
-                  <text class="ide-graph-node__title" x="36" y="28">End</text>
-                </g>
-              </svg>
-            </div>
-            <aside class="ide-frame__designer">
-              <div class="ide-frame__panel-title">Properties</div>
-              <div class="ide-frame__field">
-                <label>Pipeline</label>
-                <div>billing-kb-v2</div>
-              </div>
-              <div class="ide-frame__field">
-                <label>Retrieval mode</label>
-                <div>Hybrid</div>
-              </div>
-              <div class="ide-frame__field">
-                <label>Top K</label>
-                <div>8</div>
-              </div>
-              <div class="ide-frame__field">
-                <label>Chunk strategy</label>
-                <div class="ide-frame__field--code">recursive · 512 tok</div>
-              </div>
-            </aside>
-          </div>
-          <div class="ide-frame__status">
-            <div class="ide-frame__status-tabs">
-              <span>Canvas</span>
-              <span>Terminal</span>
-              <span>Problems</span>
-            </div>
-            <span>Multi-target export · LangSmith tracing on</span>
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -384,8 +245,8 @@
           </div>
 
           <div class="wf-cta">
-            <a class="btn btn-primary" href="https://langtailor.langstitch.com">Get LangTailor IDE</a>
-            <a class="btn btn-outline" href="https://github.com/LangStitch/langtailor-releases/releases">See release notes</a>
+            <a class="btn btn-primary" href="https://langtailor.langstitch.com">LangTailor downloads &amp; VSX →</a>
+            <a class="btn btn-outline" href="https://sdk.langstitch.com">SDK docs</a>
           </div>
           <p class="wf-cta__note">Your first export is yours forever — no account, no lock-in.</p>
         </div>
@@ -437,64 +298,6 @@
     </div>
   </section>
 
-  <section id="choose" class="section">
-    <div class="wrap wrap--wide">
-      <div class="section-head">
-        <span class="label">Choose your install</span>
-        <h2>Two ways to build with LangStitch</h2>
-        <p class="lead">Same canvas, same <code>*.langstitch.json</code> projects — pick the VS Code extension for a focused editor workflow, or LangTailor IDE for advanced control from design through deploy.</p>
-      </div>
-
-      <div class="tier-grid">
-        <article class="tier-card tier-card--vsx">
-          <div class="tier-card__head">
-            <h3>LangTailor Canvas · VSX</h3>
-            <span class="tag tag--vsx">For VS Code</span>
-          </div>
-          <p class="tier-card__lede">The full LangStitch graph editor inside VS Code or VSCodium — design agents and export production code without switching tools.</p>
-          <p class="tier-scope">Canvas · designers · export</p>
-          <ul class="tier-list">
-            <li>Visual LangGraph canvas with LLM, RAG, Tool, Agent nodes</li>
-            <li>Asset designers — skills, guardrails, personas, RAG pipelines</li>
-            <li>Production export — Python, Spring AI, Go, Rust from one canvas</li>
-            <li>Custom editor for <code>*.langstitch.json</code> in your workspace</li>
-            <li>One-click install from Open VSX — stays in your editor flow</li>
-          </ul>
-          <div class="tier-foot">
-            <a class="btn btn-primary btn-block" href="https://open-vsx.org/extension/langstitch/langtailor-canvas">Install from Open VSX</a>
-            <a class="btn btn-outline btn-sm btn-block" href="https://langtailor.langstitch.com" style="margin-top:8px;">Download at langtailor.langstitch.com</a>
-            <pre style="margin-top:10px; padding:10px; font-size:10px;"><code>codium --install-extension langstitch.langtailor-canvas</code></pre>
-          </div>
-        </article>
-
-        <article class="tier-card tier-card--primary">
-          <div class="tier-card__head">
-            <h3>LangTailor IDE</h3>
-            <span class="tag tag--live">Full control</span>
-          </div>
-          <p class="tier-card__lede">The purpose-built agent IDE — everything in VSX, plus advanced tooling to run, debug, and ship agents in your language of choice.</p>
-          <p class="tier-scope tier-scope--pro">Canvas · code · terminal · platform · deploy</p>
-          <ul class="tier-list">
-            <li>Everything in the VSX canvas extension</li>
-            <li>Canvas + code views kept in sync — edit either side</li>
-            <li>Integrated terminal, git SCM, and language tooling (Python LSP today)</li>
-            <li>Platform panel — Docker build, Helm deploy, eval runs</li>
-            <li>Marketplace sign-in and plugin sync built in</li>
-            <li>One-click export, run, and debug — Python, Spring AI, Go, Rust targets</li>
-          </ul>
-          <div class="tier-foot">
-            <a class="btn btn-primary btn-block" href="https://langtailor.langstitch.com">Download LangTailor</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="migrate-tip">
-        <strong>Start with VSX, grow into IDE anytime.</strong>
-        Projects are identical — open the same <code>*.langstitch.json</code> files in LangTailor when you want terminal, git, platform ops, or marketplace without migrating or re-exporting.
-        <a href="https://langtailor.langstitch.com">Download LangTailor →</a>
-      </div>
-    </div>
-  </section>
 
   <section id="features" class="section section--features">
     <div class="wrap wrap--wide">
