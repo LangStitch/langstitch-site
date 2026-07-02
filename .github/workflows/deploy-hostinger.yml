@@ -1,13 +1,7 @@
 name: Deploy to Hostinger
 
-# Publishes langstitch.com to Hostinger over FTPS.
-# The scoped FTP account lands above the live docroot — static files go to
-# public_html/ and hostinger-root.htaccess is published as /.htaccess to rewrite.
-#
-# Required secrets:
-#   FTP_SERVER    - 217.21.84.75
-#   FTP_USERNAME  - u743467360.langstitchdeveloper
-#   FTP_PASSWORD  - FTP account password
+# Mirror to Hostinger public_html/ (scoped FTP account). Primary delivery is GitHub Pages.
+# The live docroot for langstitch.com is outside this FTP account — use GitHub Pages DNS.
 
 on:
   push:
@@ -44,48 +38,28 @@ jobs:
           protocol: ftps
           server-dir: public_html/
           timeout: 120000
-          state-name: langstitch-public-html
+          state-name: langstitch-public-html-v2
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             README.md
             hostinger-root.htaccess
-            .htaccess
+            .nojekyll
 
-      - name: Prepare account-root rewrite
-        if: steps.ftp.outputs.configured == 'true'
-        run: |
-          mkdir -p _hostinger-root
-          cp hostinger-root.htaccess _hostinger-root/.htaccess
-
-      - name: Deploy account-root rewrite
-        if: steps.ftp.outputs.configured == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: _hostinger-root/
-          server-dir: ./
-          timeout: 120000
-          state-name: langstitch-root-rewrite
-          dangerous-clean-slate: true
-
-      - name: Verify live site
+      - name: Verify Hostinger mirror
         if: steps.ftp.outputs.configured == 'true'
         run: |
           set -euo pipefail
-          URL="https://langstitch.com/"
+          URL="https://langstitch.com/public_html/"
           for i in 1 2 3 4 5 6; do
-            BODY="$(curl -fsSL --compressed -H "Cache-Control: no-cache" -H "Pragma: no-cache" "$URL" || true)"
+            BODY="$(curl -fsSL --compressed -H "Cache-Control: no-cache" "$URL" || true)"
             if echo "$BODY" | grep -q 'hero--xtra'; then
-              echo "Live site OK — redesign marker found (attempt $i)."
+              echo "Hostinger mirror OK at $URL (attempt $i)."
               exit 0
             fi
-            echo "Waiting for CDN/cache (attempt $i/6)…"
+            echo "Waiting for Hostinger mirror (attempt $i/6)…"
             sleep 15
           done
-          echo "::error::https://langstitch.com/ is not serving the latest index.html (missing hero--xtra)."
+          echo "::error::Hostinger mirror at $URL is missing hero--xtra."
           exit 1
