@@ -71,6 +71,7 @@ jobs:
           server-dir: ./
           timeout: 120000
           state-name: langstitch-root-rewrite
+          dangerous-clean-slate: true
 
       - name: Verify live site
         if: steps.ftp.outputs.configured == 'true'
