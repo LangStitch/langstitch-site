@@ -28,6 +28,9 @@ jobs:
           cp -r assets _site/assets
           cp -r docs _site/docs
 
+      - name: Verify built site
+        run: grep -q 'hero--xtra' _site/index.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -43,19 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Verify Pages deployment
-        run: |
-          set -euo pipefail
-          URL="${{ steps.deployment.outputs.page_url }}"
-          for i in 1 2 3 4 5 6; do
-            BODY="$(curl -fsSL --compressed -H "Cache-Control: no-cache" "$URL" || true)"
-            if echo "$BODY" | grep -q 'hero--xtra'; then
-              echo "Pages deployment OK at $URL (attempt $i)."
-              exit 0
-            fi
-            echo "Waiting for Pages propagation (attempt $i/6)…"
-            sleep 15
-          done
-          echo "::error::Pages deployment at $URL is missing hero--xtra."
-          exit 1

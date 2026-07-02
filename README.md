@@ -26,8 +26,10 @@ Static site, published on every push to `main`:
 
 | Target | Workflow | Live URL |
 |--------|----------|----------|
-| GitHub Pages | `.github/workflows/pages.yml` | https://langstitch.com (CNAME) |
-| Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | https://langstitch.com |
+| GitHub Pages | `.github/workflows/pages.yml` | https://langstitch.com (after DNS → GitHub Pages) |
+| Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | Mirror at `/public_html/` on Hostinger |
+
+**DNS:** `langstitch.com` must point to **GitHub Pages** for the primary site to update. In Hostinger hPanel → DNS, set apex `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (or `CNAME` `www` → `langstitch.github.io`). The scoped FTP account cannot write the live docroot for the apex domain.
 
 No build step — files are served as-is.
 
