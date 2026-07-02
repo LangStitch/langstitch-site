@@ -39,7 +39,9 @@ No build step — files are served as-is.
 | `FTP_USERNAME` | `u743467360.langstitchdeveloper` |
 | `FTP_PASSWORD` | FTP password for that account |
 
-Deploy targets `./` (account root).
+Deploy targets `./` (the FTP account root / domain docroot).
+
+If `https://langstitch.com/` still shows an old build after a green deploy, open **hPanel → File Manager** for the domain and remove any stale `index.html` / `styles.css` sitting **above** the FTP account folder (orphan copies from an earlier path). The workflow also attempts to delete those via FTPS.
 
 ## Local preview
 

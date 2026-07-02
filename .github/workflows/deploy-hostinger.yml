@@ -28,6 +28,23 @@ jobs:
         if: steps.ftp.outputs.configured == 'true'
         uses: actions/checkout@v7
 
+      - name: Remove stale copies above FTP home
+        if: steps.ftp.outputs.configured == 'true'
+        continue-on-error: true
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" <<'EOF'
+          set ftp:ssl-force true
+          set ssl:verify-certificate no
+          cd ..
+          rm -f index.html styles.css
+          bye
+          EOF
+
       - name: Deploy site files to domain root
         if: steps.ftp.outputs.configured == 'true'
         id: ftps
@@ -39,13 +56,12 @@ jobs:
           protocol: ftps
           server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
           timeout: 120000
-          state-name: langstitch-domain-root-v1
+          state-name: langstitch-domain-root-v2
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
             README.md
-            hostinger-root.htaccess
             .nojekyll
 
       - name: Verify live site
@@ -62,5 +78,5 @@ jobs:
             echo "Waiting for langstitch.com to update (attempt $i/6)…"
             sleep 15
           done
-          echo "::error::langstitch.com did not serve the new build after deploy."
+          echo "::error::langstitch.com/ still serves the old build. In hPanel, delete orphan index.html above public_html or set the document root to the FTP account folder."
           exit 1
