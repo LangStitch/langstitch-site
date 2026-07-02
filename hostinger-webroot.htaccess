@@ -1,7 +1,9 @@
 # Hostinger: web docroot is one level above the scoped FTP home.
 # Site files deploy to ./ (public_html on disk); this file lives in the parent web root.
+# IMPORTANT: scope to langstitch.com only — sibling subdomains share this account folder.
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(www\.)?langstitch\.com$ [NC]
   RewriteCond %{REQUEST_URI} !^/public_html/
   RewriteRule ^(.*)$ public_html/$1 [L]
 </IfModule>
