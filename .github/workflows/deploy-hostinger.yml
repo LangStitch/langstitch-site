@@ -1,7 +1,7 @@
 name: Deploy to Hostinger
 
 # Publishes langstitch.com to Hostinger over FTPS.
-# FTP account u743467360.langstitchdeveloper is scoped to the domain docroot (deploy to ./).
+# The FTP account (secrets) is scoped to the domain docroot (deploy to ./).
 # Hostinger serves the parent folder at /; hostinger-webroot.htaccess rewrites into ./.
 # Never use dangerous-clean-slate — sibling subdomains (langtailor, sdk) live alongside this tree.
 # This repo deploys langstitch.com only. Never add langtailor-site files or a langtailor/ folder here.
@@ -80,7 +80,7 @@ jobs:
           URL="https://langstitch.com/"
           for i in 1 2 3 4 5 6; do
             BODY="$(curl -fsSL --compressed -H "Cache-Control: no-cache" "$URL" 2>/dev/null || true)"
-            if grep -Fq 'hero--xtra' <<<"$BODY" && ! grep -Fq 'id="choose"' <<<"$BODY"; then
+            if grep -Fq 'hero--xtra' <<<"$BODY" && grep -Fq 'styles.css?v=8' <<<"$BODY" && ! grep -Fq 'id="choose"' <<<"$BODY"; then
               echo "Live site OK at $URL (attempt $i)."
               exit 0
             fi

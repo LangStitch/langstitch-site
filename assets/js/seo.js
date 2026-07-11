@@ -8,7 +8,6 @@
   var EMAIL = "connect@langstitch.com";
   var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/og-card.png";
   var LANGTAILOR_URL = "https://langtailor.langstitch.com/";
-  var OPENVSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
 
   var PAGES = {
     "index.html": {
@@ -102,7 +101,9 @@
       description:
         "Download the LangTailor desktop IDE (Windows & macOS) or the LangStitch canvas VSX extension. No hosted browser IDE.",
       keywords: "LangStitch download, VSX, Open VSX, LangTailor, LangGraph IDE, macOS, Windows",
-      type: "website"
+      type: "website",
+      canonical: LANGTAILOR_URL + "#download",
+      robots: "noindex, follow"
     }
   };
 
@@ -137,15 +138,18 @@
 
   function apply() {
     var page = PAGES[fileName()] || PAGES["index.html"];
+    var canonical = page.canonical || SITE_URL + "/";
     document.title = page.title;
     upsertMeta("name", "description", page.description);
     upsertMeta("name", "keywords", page.keywords);
     upsertMeta("name", "author", AUTHOR);
     upsertMeta("name", "theme-color", "#000000");
+    if (page.robots) upsertMeta("name", "robots", page.robots);
     upsertMeta("property", "og:title", page.title);
     upsertMeta("property", "og:description", page.description);
-    upsertMeta("property", "og:url", SITE_URL + "/");
+    upsertMeta("property", "og:url", canonical);
     upsertMeta("property", "og:image", DEFAULT_IMAGE);
+    upsertMeta("property", "og:image:type", "image/png");
     upsertMeta("property", "og:site_name", SITE_NAME);
     upsertMeta("property", "og:type", page.type || "website");
     upsertMeta("name", "twitter:card", "summary_large_image");
@@ -153,7 +157,7 @@
     upsertMeta("name", "twitter:title", page.title);
     upsertMeta("name", "twitter:description", page.description);
     upsertMeta("name", "twitter:image", DEFAULT_IMAGE);
-    upsertLink("canonical", SITE_URL + "/");
+    upsertLink("canonical", canonical);
     upsertLink("sitemap", SITE_URL + "/sitemap.xml", "application/xml");
 
     document.querySelectorAll('script[type="application/ld+json"][data-seo]').forEach(function (n) {

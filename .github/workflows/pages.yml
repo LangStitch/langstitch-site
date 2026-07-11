@@ -29,7 +29,11 @@ jobs:
           cp -r docs _site/docs
 
       - name: Verify built site
-        run: grep -q 'hero--xtra' _site/index.html
+        run: |
+          grep -q 'hero--xtra' _site/index.html
+          grep -Fq 'styles.css?v=8' _site/index.html
+          test -f _site/sitemap.xml
+          test -f _site/robots.txt
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
