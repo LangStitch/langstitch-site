@@ -1,6 +1,6 @@
 # LangStitch — Product Website
 
-Marketing site for the **LangStitch** agent engineering platform — visual LangGraph canvas, multi-language SDK (Python, Spring AI, Go, Rust), marketplace, and **LangTailor** IDE.
+Marketing site for the **LangStitch** agent engineering platform — visual LangGraph canvas, multi-language project generation (Python ships today; Spring AI, Go, Rust expanding), marketplace, and **LangTailor** IDE.
 
 - **Live:** https://langstitch.com
 - **Docs redirect:** https://langstitch.com/docs/ → https://sdk.langstitch.com
@@ -35,8 +35,8 @@ No build step — files are served as-is.
 
 | Secret | Value |
 |--------|--------|
-| `FTP_SERVER` | `217.21.84.75` (Hostinger FTP IP — use the IP only, no `ftp://` prefix) |
-| `FTP_USERNAME` | `u743467360.langstitchdeveloper` |
+| `FTP_SERVER` | Hostinger FTP host (IP only, no `ftp://` prefix) |
+| `FTP_USERNAME` | FTP username for the langstitch.com account |
 | `FTP_PASSWORD` | FTP password for that account |
 
 Deploy targets `./` (the FTP account root). Hostinger serves the parent web folder at `/`; `hostinger-webroot.htaccess` rewrites requests into the FTP folder.

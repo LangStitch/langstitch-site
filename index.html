@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LangStitch — Visual LangGraph Platform · Multi-language Export</title>
-  <meta name="description" content="The agent engineering platform — visual LangGraph canvas, multi-language SDK (Python, Spring AI, Go, Rust), Component Designer, marketplace, and LangTailor IDE. Design once, export to your stack." />
-  <meta name="keywords" content="LangStitch, LangGraph platform, agent engineering, visual canvas, multi-language export, Spring AI, Go agents, Rust agents, Python export, SDK, marketplace, LangTailor, RAG, guardrails" />
+  <meta name="description" content="The agent engineering platform — visual LangGraph canvas, multi-language project generation (Python ships today; Spring AI, Go, Rust expanding), Component Designer, marketplace, and LangTailor IDE." />
+  <meta name="keywords" content="LangStitch, LangGraph platform, agent engineering, visual canvas, multi-language export, Python export, Spring AI, Go, Rust, SDK, marketplace, LangTailor, RAG, guardrails" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="LangStitch" />
   <meta name="application-name" content="LangStitch" />
@@ -13,14 +13,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://langstitch.com/" />
   <meta property="og:title" content="LangStitch — Design Agents Visually, Ship to Production" />
-  <meta property="og:description" content="Visual LangGraph platform — canvas, SDK, marketplace, LangTailor IDE. Export Python, Java, Go, Rust." />
-  <meta property="og:image" content="https://langstitch.com/assets/og-card.svg" />
+  <meta property="og:description" content="Visual LangGraph platform — canvas, SDK, marketplace, LangTailor IDE. Multi-language project generation — Python ships today; Spring AI, Go, and Rust expanding." />
+  <meta property="og:image" content="https://langstitch.com/assets/og-card.png" />
   <meta property="og:image:alt" content="LangStitch agent engineering platform" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LangStitch" />
   <meta name="twitter:title" content="LangStitch · Agent Engineering Platform" />
-  <meta name="twitter:description" content="Canvas · multi-language SDK · Marketplace · LangTailor — Python, Spring AI, Go, Rust." />
-  <meta name="twitter:image" content="https://langstitch.com/assets/og-card.svg" />
+  <meta name="twitter:description" content="Canvas · multi-language SDK · Marketplace · LangTailor — Python ships today; more languages expanding." />
+  <meta name="twitter:image" content="https://langstitch.com/assets/og-card.png" />
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://langstitch.com/" />
@@ -31,13 +31,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
   <script src="assets/js/seo.js" defer></script>
   <script src="assets/js/features.js" defer></script>
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="stylesheet" href="assets/css/analytics.css" />
 </head>
 <body>
+  <a class="skip-link" href="#ecosystem">Skip to content</a>
   <nav class="nav">
     <a class="nav-logo" href="./">
-      <img class="nav-logo__icon" src="assets/brand-logo.svg" width="26" height="26" alt="" />
+      <img class="nav-logo__icon" src="assets/brand-logo.svg" width="26" height="26" alt="LangStitch" />
       <span class="nav-logo__text">
         <span class="nav-logo__title">LangStitch</span>
         <span class="nav-logo__subtitle">Agent Engineering Platform</span>
@@ -47,13 +48,14 @@
     <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
       <a href="#ecosystem">Ecosystem</a>
+      <a href="#workflow">Workflow</a>
       <a href="#features">Features</a>
       <a href="https://sdk.langstitch.com">SDK</a>
       <a href="https://langtailor.langstitch.com">LangTailor</a>
       <a href="https://marketplace.langstitch.com">Marketplace</a>
       <a href="#compare">Compare</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cta" href="https://langtailor.langstitch.com">Download IDE</a>
+      <a class="nav-cta" href="https://langtailor.langstitch.com/#download">Download IDE</a>
     </div>
   </nav>
 
@@ -64,26 +66,28 @@
       <span class="hero-aurora__orb hero-aurora__orb--c"></span>
     </div>
     <div class="wrap">
-      <div class="hero-stack">
+      <div class="hero-stack hero-stack--with-viz">
+        <div class="hero-copy">
         <div class="hero-kicker">
           <span class="hero-kicker__pill">LangStitch Platform</span>
           <span class="hero-kicker__text">Canvas · SDK · Marketplace · LangTailor IDE</span>
         </div>
-        <h1>Design agent systems visually.<br />Ship to production.</h1>
+        <h1>One platform for agent engineering.<br />Four surfaces that ship together.</h1>
         <p class="lead hero-lead">
-          The full agent engineering stack — drag-and-drop LangGraph canvas, asset designers,
-          Component SDK, community marketplace, and the <strong>LangTailor</strong> IDE.
-          Export to <strong>Python, Spring AI, Go, Rust</strong> — one platform, zero lock-in.
+          Design on a LangGraph canvas, extend with the <strong>Component Designer</strong>, share on the marketplace,
+          and ship with the <strong>LangTailor</strong> IDE (Windows &amp; macOS).
+          Multi-language project generation — <strong>Python ships today</strong>; Spring AI, Go, and Rust are expanding.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://langtailor.langstitch.com">Get LangTailor IDE</a>
+          <a class="btn btn-primary" href="https://langtailor.langstitch.com/#download">Download LangTailor (Windows &amp; macOS)</a>
           <a class="btn btn-outline" href="https://sdk.langstitch.com">Explore SDK</a>
           <a class="btn btn-ghost" href="https://marketplace.langstitch.com">Marketplace</a>
         </div>
         <div class="hero-meta">
-          <span class="tag tag--live">LangGraph native</span>
-          <span class="tag">Python · Java · Go · Rust</span>
-          <span class="tag">Component SDK</span>
+          <span class="tag tag--live">Python · shipping</span>
+          <span class="tag">Spring AI · Go · Rust · expanding</span>
+          <span class="tag">Component Designer</span>
+          <span class="tag">LangTailor v0.2.9</span>
           <span class="tag">MIT</span>
         </div>
 
@@ -93,15 +97,37 @@
             <span class="hero-stat__lbl">Platform surfaces</span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat__val">8+</span>
-            <span class="hero-stat__lbl">Asset designers</span>
+            <span class="hero-stat__val">77</span>
+            <span class="hero-stat__lbl">Marketplace catalog items</span>
           </div>
           <div class="hero-stat">
             <span class="hero-stat__val">1-click</span>
             <span class="hero-stat__lbl">Export &amp; deploy</span>
           </div>
         </div>
+        </div>
 
+        <div class="hero-viz" aria-hidden="true">
+          <div class="ide-frame ide-frame--hero">
+            <div class="ide-frame__toolbar">
+              <div class="ide-frame__brand-text"><strong>LangTailor</strong> <span>canvas</span></div>
+              <div class="ide-frame__actions">
+                <span class="ide-frame__btn">Build</span>
+                <span class="ide-frame__btn ide-frame__btn--run">Run</span>
+                <span class="ide-frame__btn">Export</span>
+              </div>
+            </div>
+            <div class="ide-frame__body">
+              <div class="ide-frame__canvas">
+                <span class="ide-node ide-node--start">Start</span>
+                <span class="ide-node ide-node--rag">RAG</span>
+                <span class="ide-node ide-node--llm">LLM</span>
+                <span class="ide-node ide-node--end">End</span>
+              </div>
+            </div>
+          </div>
+          <p class="hero-viz-note">Visual canvas · Component Designer · marketplace sync</p>
+        </div>
       </div>
     </div>
   </header>
@@ -112,13 +138,13 @@
       <span>Visual Canvas</span><span>·</span>
       <span>RAG Pipelines</span><span>·</span>
       <span>Guardrails</span><span>·</span>
-      <span>Component SDK</span><span>·</span>
+      <span>Component Designer</span><span>·</span>
       <span>Marketplace</span><span>·</span>
       <span>LangTailor IDE</span><span>·</span>
-      <span>Python Export</span><span>·</span>
-      <span>Spring AI</span><span>·</span>
-      <span>Go Export</span><span>·</span>
-      <span>Rust Export</span><span>·</span>
+      <span>Python Shipping</span><span>·</span>
+      <span>Spring AI Expanding</span><span>·</span>
+      <span>Go Expanding</span><span>·</span>
+      <span>Rust Expanding</span><span>·</span>
       <span>Helm Deploy</span><span>·</span>
       <span>MCP Studio</span><span>·</span>
       <span>LangSmith</span><span>·</span>
@@ -126,13 +152,13 @@
       <span>Visual Canvas</span><span>·</span>
       <span>RAG Pipelines</span><span>·</span>
       <span>Guardrails</span><span>·</span>
-      <span>Component SDK</span><span>·</span>
+      <span>Component Designer</span><span>·</span>
       <span>Marketplace</span><span>·</span>
       <span>LangTailor IDE</span><span>·</span>
-      <span>Python Export</span><span>·</span>
-      <span>Spring AI</span><span>·</span>
-      <span>Go Export</span><span>·</span>
-      <span>Rust Export</span><span>·</span>
+      <span>Python Shipping</span><span>·</span>
+      <span>Spring AI Expanding</span><span>·</span>
+      <span>Go Expanding</span><span>·</span>
+      <span>Rust Expanding</span><span>·</span>
       <span>Helm Deploy</span><span>·</span>
       <span>MCP Studio</span><span>·</span>
       <span>LangSmith</span><span>·</span>
@@ -156,22 +182,31 @@
         <a class="eco-card eco-card--sdk" href="https://sdk.langstitch.com">
           <span class="eco-card__icon">02</span>
           <h3>Multi-language SDK</h3>
-          <p>Python on PyPI today; Spring AI, Go, and Rust share the same scaffold and canvas export.</p>
+          <p>Python on PyPI today; Spring AI, Go, and Rust share the same project conventions as they expand.</p>
           <span class="eco-card__link">sdk.langstitch.com →</span>
         </a>
         <a class="eco-card eco-card--market" href="https://marketplace.langstitch.com">
           <span class="eco-card__icon">03</span>
           <h3>Marketplace</h3>
-          <p>77+ connectors, agents, skill graphs, MCP server packs, and utility plugins.</p>
+          <p>77 items — 20 connectors · 6 agents · 28 graphs · 12 MCP packs · 10 utility plugins.</p>
           <span class="eco-card__link">Browse catalog →</span>
         </a>
         <a class="eco-card eco-card--ide" href="https://langtailor.langstitch.com">
           <span class="eco-card__icon">04</span>
           <h3>LangTailor IDE</h3>
-          <p>Desktop + VSX — canvas, terminal, git, deploy.</p>
+          <p>Windows &amp; macOS desktop + VSX — canvas, terminal, git, deploy.</p>
           <span class="eco-card__link">Download →</span>
         </a>
       </div>
+
+      <div class="market-strip" aria-label="Marketplace catalog breakdown">
+        <div class="market-strip__item"><span class="market-strip__n">20</span><span class="market-strip__l">Connectors</span></div>
+        <div class="market-strip__item"><span class="market-strip__n">6</span><span class="market-strip__l">Agents</span></div>
+        <div class="market-strip__item"><span class="market-strip__n">28</span><span class="market-strip__l">Graphs</span></div>
+        <div class="market-strip__item"><span class="market-strip__n">12</span><span class="market-strip__l">MCP packs</span></div>
+        <div class="market-strip__item"><span class="market-strip__n">10</span><span class="market-strip__l">Utility plugins</span></div>
+      </div>
+      <p class="market-strip__note">GitHub sign-in · sync into canvas · publish/review — <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a></p>
     </div>
   </section>
 
@@ -219,10 +254,10 @@
                 <span class="wf-step__phase">Ship</span>
               </div>
               <h3>Export, run, deploy — no context switch</h3>
-              <p>One click gives you a buildable project, Docker image, and Helm chart — target Python, Spring AI, Go, Rust, or bundled stacks.</p>
+              <p>One click gives you a buildable Python project, Docker image, and Helm chart — with Spring Boot gateway and more language targets expanding.</p>
               <ul class="wf-step__wins">
                 <li><code>langsmith.json</code> round-trips back to the IDE</li>
-                <li>Git sync + FastAPI platform ops included</li>
+                <li>Local Build / Run / Deploy toolchain + optional Git sync</li>
               </ul>
             </article>
           </div>
@@ -271,16 +306,16 @@
               <div class="wf-demo__block">
                 <div class="wf-demo__label">Project structure</div>
                 <pre class="wf-demo__tree"><code>billing-agent/
-├── export/python/          ← shipping today
-├── export/spring-ai/       ← Java · Spring AI
-├── export/go/
-├── export/rust/
+├── src/billingagent/       ← Python · shipping today
+├── spring/                 ← Spring Boot API gateway (optional)
 ├── skills/ · guardrails/ · rag/
 ├── deploy/helm/billing-agent/
-└── langsmith.json</code></pre>
+├── langstitch.project.json
+└── langsmith.json
+# Spring AI · Go · Rust project gen → expanding</code></pre>
               </div>
               <div class="wf-demo__block">
-                <div class="wf-demo__label">Terminal · Python runtime (multi-target export tree)</div>
+                <div class="wf-demo__label">Terminal · Python runtime</div>
                 <pre class="wf-demo__term"><code><span class="wf-term-prompt">$</span> cd billing-agent &amp;&amp; pip install -r requirements.txt
 <span class="wf-term-prompt">$</span> python -m graphs.billing_agent
 <span class="wf-term-ok">✓ LangSmith trace started</span>
@@ -412,7 +447,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">04</span>
             <h3>Multi-language export</h3>
-            <p>Python (LangGraph) today — Spring AI, Go, Rust, and more. Multi-module projects + <code>langsmith.json</code> round-trip.</p>
+            <p>Python (LangGraph) ships today — Spring AI, Go, Rust expanding. Multi-module projects + <code>langsmith.json</code> round-trip.</p>
           </div>
         </article>
 
@@ -447,7 +482,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">06</span>
             <h3>Platform ops</h3>
-            <p>Git sync, Docker build, Helm deploy via FastAPI backend.</p>
+            <p>Local Build / Run / Test / Deploy toolchain, Git sync, Docker, and Helm — no hosted API required for day-to-day ops.</p>
           </div>
         </article>
 
@@ -465,7 +500,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">07</span>
             <h3>Integrations</h3>
-            <p>MCP Studio, tool registry, remote graphs, A2A, LangSmith, Langfuse.</p>
+            <p>MCP Studio, tool registry, remote graphs, A2A, human-in-the-loop, LangSmith, Langfuse.</p>
           </div>
         </article>
 
@@ -483,7 +518,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">08</span>
             <h3>Marketplace</h3>
-            <p>Community components and connectors at <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a>.</p>
+            <p>77 catalog items — connectors, agents, graphs, MCP packs, utility plugins. GitHub sign-in, sync, publish/review at <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a>.</p>
           </div>
         </article>
       </div>
@@ -495,7 +530,7 @@
       <div class="sdk-intro">
         <span class="label">SDK</span>
         <h2>Bring LangStitch to your stack</h2>
-        <p class="sdk-lede">Extend LangStitch with the <strong>Component Designer</strong> for visual custom nodes and connectors, or use the <strong>multi-language SDK</strong> to build graphs, skills, guardrails, and policies in code. Python ships on PyPI today; Spring AI (Java), Go, and Rust share the same project structure LangTailor exports from the canvas.</p>
+        <p class="sdk-lede">Extend LangStitch with the <strong>Component Designer</strong> for visual custom nodes and connectors, or use the <strong>multi-language SDK</strong> to build graphs, skills, guardrails, and policies in code. Python ships on PyPI today; Spring AI (Java), Go, and Rust follow the same project conventions as they expand.</p>
       </div>
 
       <div class="sdk-langs">
@@ -511,7 +546,7 @@
             <span class="sdk-lang__name">Spring AI (Java)</span>
             <span class="sdk-badge">Expanding</span>
           </div>
-          <p>Spring Boot starters and annotations — exported to <code>export/spring-ai/</code> from LangTailor.</p>
+          <p>Full Spring AI project generation is expanding. Today LangTailor can also emit an optional Spring Boot API gateway beside Python.</p>
         </article>
         <article class="sdk-lang">
           <div class="sdk-lang__head">
@@ -534,7 +569,7 @@
           <h3>Python runtime · available now</h3>
           <span class="sdk-badge sdk-badge--live">langstitch-sdk</span>
         </div>
-        <p class="sdk-detail__lede"><code>pip install langstitch-sdk</code> — decorators, typed <code>application.yaml</code>, CLI scaffold, and LangGraph compilation. Same layout LangTailor exports for every language target.</p>
+        <p class="sdk-detail__lede"><code>pip install langstitch-sdk</code> — decorators, typed <code>application.yaml</code>, CLI scaffold, and LangGraph compilation. The layout other language targets will share as they expand.</p>
         <div class="sdk-actions">
           <a class="btn btn-primary" href="https://sdk.langstitch.com">SDK docs</a>
           <a class="btn btn-outline" href="https://pypi.org/project/langstitch-sdk/">PyPI</a>
@@ -551,8 +586,8 @@
         <h2>How LangStitch compares</h2>
         <p class="compare-lede">
           LangStitch takes the best ideas from visual agent builders and LangGraph tooling — then centers
-          <strong>production support</strong> and <strong>developer experience</strong>. Ship real projects in
-          <strong>Python, Spring AI, Go, or Rust</strong> — not throwaway JSON blobs.
+          <strong>production support</strong> and <strong>developer experience</strong>. Multi-language project generation —
+          <strong>Python ships today</strong>; Spring AI, Go, and Rust are expanding — not throwaway JSON blobs.
         </p>
       </div>
 
@@ -597,6 +632,7 @@
       </div>
 
       <h3 class="compare-subhead">Side-by-side</h3>
+      <p class="compare-scroll-hint">Swipe sideways to see the full comparison →</p>
       <div class="compare-table-wrap">
         <table class="compare-table">
           <thead>
@@ -646,7 +682,7 @@
             </tr>
             <tr>
               <td>Multi-language production export (Git-friendly)</td>
-              <td class="compare-highlight"><span class="mark-yes">✓</span> Python · Spring AI · Go · Rust + <code>langsmith.json</code></td>
+              <td class="compare-highlight"><span class="mark-yes">✓</span> Python shipping · Spring AI / Go / Rust <span class="mark-gap">→</span> expanding + <code>langsmith.json</code></td>
               <td>Code export</td>
               <td>JSON / Python varies</td>
               <td>API / limited export</td>
@@ -709,7 +745,7 @@
             </tr>
             <tr>
               <td>Eval datasets &amp; trace replay (LangSmith depth)</td>
-              <td class="compare-highlight"><span class="mark-yes">✓</span> Platform Eval tab + export</td>
+              <td class="compare-gap"><span class="mark-gap">→</span> Export hooks today</td>
               <td><span class="mark-yes">✓</span> Best-in-class</td>
               <td>Basic</td>
               <td>Moderate</td>
@@ -737,7 +773,7 @@
           <h3>LangStitch edge — production &amp; DX</h3>
           <ol>
             <li>
-              <strong>Code is the contract</strong> — Export buildable projects for Python, Spring AI, Go, or Rust with
+              <strong>Code is the contract</strong> — Export buildable Python projects today (Spring AI, Go, Rust expanding) with
               <code>graphs/</code>, <code>skills/</code>, <code>guardrails/</code>, and
               <code>langsmith.json</code> for round-trip IDE import. Review in PRs like any backend service.
             </li>
@@ -781,8 +817,8 @@
       </div>
 
       <div class="compare-callout">
-        <strong>Summary:</strong> LangStitch is for teams shipping LangGraph to production in the language they run —
-        Python, Spring AI, Go, or Rust. Use LangSmith for traces; use LangStitch to design, export,
+        <strong>Summary:</strong> LangStitch is for teams shipping LangGraph to production.
+        Python project generation ships today; Spring AI, Go, and Rust are expanding. Use LangSmith for traces; use LangStitch to design, export,
         and deploy the graph your SREs can support.
       </div>
     </div>
@@ -810,6 +846,33 @@
     </div>
   </section>
 
+  <section id="privacy" class="section">
+    <div class="wrap wrap--narrow">
+      <div class="section-head section-head--center">
+        <span class="label">Privacy</span>
+        <h2>Analytics &amp; cookies</h2>
+        <p class="section-head__lede">How LangStitch uses first-party analytics on this site.</p>
+      </div>
+      <div class="contact-panel privacy-panel">
+        <h3>Overview</h3>
+        <p>LangStitch runs first-party analytics on our public sites to understand how visitors use pages and features. We do not use third-party ad trackers or sell visitor data.</p>
+        <h3>What we collect (with consent)</h3>
+        <ul>
+          <li>Pages viewed, clicks, scroll depth, and time on page</li>
+          <li>Browser, operating system, device type, screen size, and language</li>
+          <li>Approximate location (country/region/city derived from IP)</li>
+          <li>Referrer, UTM campaign parameters, and landing URL</li>
+          <li>A random visitor ID stored in your browser (local storage) and a session ID (session storage)</li>
+        </ul>
+        <h3>Your choices</h3>
+        <p>Accept or decline analytics in the cookie banner. If you decline, we do not set tracking cookies or record browsing events. You can clear site data in your browser to reset your choice.</p>
+        <h3>Data requests</h3>
+        <p>Email <a href="mailto:connect@langstitch.com?subject=Privacy%20request">connect@langstitch.com</a> to ask about your data or request deletion.</p>
+        <p class="privacy-updated"><em>Last updated: July 2026</em></p>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer-inner">
       <nav class="footer-links">
@@ -821,12 +884,12 @@
         <a href="https://sdk.langstitch.com">sdk</a>
         <a href="https://marketplace.langstitch.com">marketplace</a>
         <a href="#contact">business &amp; training</a>
+        <a href="#privacy">privacy</a>
         <a href="mailto:connect@langstitch.com">connect@langstitch.com</a>
       </nav>
       <p class="footer-copy">MIT · <a href="https://github.com/LangStitch">github.com/LangStitch</a></p>
     </div>
   </footer>
-  <section id="privacy" class="section" hidden aria-hidden="true"></section>
   <script src="assets/js/analytics.js" data-site="langstitch" defer></script>
 </body>
 </html>
