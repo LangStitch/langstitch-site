@@ -32,11 +32,20 @@
             name: SITE_NAME,
             url: SITE_URL + "/",
             email: EMAIL,
-            contactPoint: {
-              "@type": "ContactPoint",
-              email: EMAIL,
-              contactType: "customer support"
-            }
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                email: EMAIL,
+                contactType: "sales",
+                description: "Business inquiries and partnerships"
+              },
+              {
+                "@type": "ContactPoint",
+                email: EMAIL,
+                contactType: "customer support",
+                description: "Training, workshops, and team enablement"
+              }
+            ]
           },
           potentialAction: {
             "@type": "SearchAction",
