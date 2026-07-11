@@ -32,6 +32,7 @@
   <script src="assets/js/seo.js" defer></script>
   <script src="assets/js/features.js" defer></script>
   <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="assets/css/analytics.css" />
 </head>
 <body>
   <nav class="nav">
@@ -800,6 +801,11 @@
       <div class="contact-panel">
         <a class="contact-email" href="mailto:connect@langstitch.com?subject=LangStitch%20business%20or%20training%20inquiry">connect@langstitch.com</a>
         <p class="contact-note">Business · training · workshops · partnerships</p>
+        <p class="contact-note" style="margin-top:14px;">
+          <strong>Privacy:</strong> With your consent we store first-party analytics (pages viewed, device/browser,
+          approximate location from IP, referral/UTM) in our database to improve LangStitch. Decline to block tracking cookies.
+          Contact <a href="mailto:connect@langstitch.com">connect@langstitch.com</a> to request deletion.
+        </p>
       </div>
     </div>
   </section>
@@ -820,5 +826,7 @@
       <p class="footer-copy">MIT · <a href="https://github.com/LangStitch">github.com/LangStitch</a></p>
     </div>
   </footer>
+  <section id="privacy" class="section" hidden aria-hidden="true"></section>
+  <script src="assets/js/analytics.js" data-site="langstitch" defer></script>
 </body>
 </html>
