@@ -65,7 +65,7 @@
           ],
           url: SITE_URL + "/",
           downloadUrl: LANGTAILOR_URL,
-          softwareVersion: "0.2.9",
+          softwareVersion: "0.3.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Organization", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
