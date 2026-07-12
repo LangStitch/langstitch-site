@@ -6,16 +6,21 @@
   var TWITTER = "@LangStitch";
   var AUTHOR = "LangStitch";
   var EMAIL = "connect@langstitch.com";
-  var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/og-card.png";
+  var DEFAULT_IMAGE = SITE_ORIGIN + "/assets/og-card.svg";
   var LANGTAILOR_URL = "https://langtailor.langstitch.com/";
+  var SDK_URL = "https://sdk.langstitch.com/";
+  var MARKETPLACE_URL = "https://marketplace.langstitch.com/";
+  var PYPI_URL = "https://pypi.org/project/langstitch-sdk/";
+  var OPEN_VSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
+  var GITHUB_ORG = "https://github.com/LangStitch";
 
   var PAGES = {
     "index.html": {
-      title: "LangStitch — Visual LangGraph Platform · Multi-language Export",
+      title: "LangStitch — Visual LangGraph Platform · IR v2 Compiler · Multi-language Export",
       description:
-        "The agent engineering platform — visual LangGraph canvas, multi-language project generation (Python ships today; Spring AI, Go, Rust expanding), Component Designer, marketplace, and LangTailor IDE.",
+        "Agent engineering platform — visual LangGraph canvas, IR v2 compiler, langstitch compile CLI, dev RunEvents, multi-language export (Python on PyPI today; Spring AI, Go, Rust expanding), Component Designer, marketplace, and LangTailor IDE.",
       keywords:
-        "LangStitch, LangGraph platform, agent engineering, visual canvas, multi-language export, Python export, Spring AI, Go, Rust, SDK, marketplace, LangTailor, RAG, guardrails, Component Designer",
+        "LangStitch, LangGraph platform, agent engineering, IR v2, langstitch compile, RunEvents, visual canvas, multi-language export, Python LangGraph, Spring AI, Go, Rust, langstitch-sdk, PyPI, marketplace, LangTailor, RAG, guardrails, Component Designer, Open VSX",
       type: "website",
       jsonLd: [
         {
@@ -24,13 +29,14 @@
           name: SITE_NAME,
           url: SITE_URL + "/",
           description:
-            "Visual LangGraph platform — canvas, multi-language SDK, marketplace, and LangTailor IDE. Python project generation ships today; Spring AI, Go, and Rust expanding.",
+            "Visual LangGraph platform — IR v2 canvas, langstitch-sdk compiler, marketplace, and LangTailor IDE. Python project generation ships on PyPI; Spring AI, Go, and Rust expanding.",
           inLanguage: "en-US",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
             url: SITE_URL + "/",
             email: EMAIL,
+            sameAs: [GITHUB_ORG, PYPI_URL, OPEN_VSX_URL, LANGTAILOR_URL, SDK_URL, MARKETPLACE_URL],
             contactPoint: [
               {
                 "@type": "ContactPoint",
@@ -54,17 +60,20 @@
           applicationCategory: "DeveloperApplication",
           operatingSystem: "Windows, macOS",
           description:
-            "Agent engineering platform — visual canvas, Component Designer, multi-language SDK, marketplace, and LangTailor IDE. Python ships today; Spring AI, Go, and Rust expanding.",
+            "Agent engineering platform — visual canvas, IR v2 compiler, dev RunEvents, Component Designer, multi-language SDK, marketplace, and LangTailor IDE. Python ships on PyPI; Spring AI, Go, and Rust expanding.",
           featureList: [
-            "Visual LangGraph canvas",
+            "Visual LangGraph canvas with IR v2",
+            "langstitch compile CLI and SDK compiler",
+            "Dev RunEvents for local debugging",
             "Multi-language project generation",
-            "Python SDK on PyPI",
+            "Python SDK on PyPI (langstitch-sdk)",
             "Spring AI / Go / Rust expanding",
-            "Component Designer",
-            "Marketplace"
+            "Component Designer and marketplace",
+            "LangTailor desktop IDE and VSX extension"
           ],
           url: SITE_URL + "/",
           downloadUrl: LANGTAILOR_URL,
+          installUrl: PYPI_URL,
           softwareVersion: "0.3.0",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Organization", name: AUTHOR, email: EMAIL },
@@ -90,6 +99,33 @@
                 "@type": "Answer",
                 text:
                   "No. LangStitch is a multi-language agent engineering platform. The Python SDK and project export ship today; Spring AI, Go, and Rust runtimes are expanding toward the same graphs/, skills/, guardrails/, and deploy/ layout."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What is LangStitch IR v2?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "IR v2 is the LangStitch intermediate representation for agent graphs — a portable document format shared by LangTailor canvas, langstitch-spec, and the langstitch-sdk compiler. Design on canvas, compile with langstitch compile, and run Python LangGraph projects with the same structure."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do I install the LangStitch Python SDK?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Run pip install langstitch-sdk on PyPI. The package includes decorators, typed YAML config, the langstitch CLI (init, compile, run), IR v2 compiler, and dev-gated RunEvents for local agent debugging."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Where can I download LangTailor?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Download LangTailor v0.3.0 for Windows and macOS at langtailor.langstitch.com, or install the LangTailor Canvas VSX extension from Open VSX. Both are MIT licensed and work with the same IR v2 canvas format."
               }
             }
           ]
@@ -149,7 +185,11 @@
     upsertMeta("property", "og:description", page.description);
     upsertMeta("property", "og:url", canonical);
     upsertMeta("property", "og:image", DEFAULT_IMAGE);
-    upsertMeta("property", "og:image:type", "image/png");
+    upsertMeta("property", "og:image:type", "image/svg+xml");
+    upsertMeta("property", "og:image:width", "1200");
+    upsertMeta("property", "og:image:height", "630");
+    upsertMeta("property", "og:image:alt", "LangStitch agent engineering platform");
+    upsertMeta("property", "og:locale", "en_US");
     upsertMeta("property", "og:site_name", SITE_NAME);
     upsertMeta("property", "og:type", page.type || "website");
     upsertMeta("name", "twitter:card", "summary_large_image");
