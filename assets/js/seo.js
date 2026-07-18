@@ -11,6 +11,8 @@
   var SDK_URL = "https://sdk.langstitch.com/";
   var MARKETPLACE_URL = "https://marketplace.langstitch.com/";
   var PYPI_URL = "https://pypi.org/project/langstitch-sdk/";
+  var MAVEN_SPRING_AI_URL = "https://central.sonatype.com/artifact/com.langstitch/langstitch-spring-ai/0.1.0";
+  var GITHUB_SPRING_AI = "https://github.com/LangStitch/langstitch-spring-ai";
   var OPEN_VSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
   var GITHUB_ORG = "https://github.com/LangStitch";
 
@@ -18,7 +20,7 @@
     "index.html": {
       title: "LangStitch — Visual LangGraph Platform · IR v2 Compiler · Multi-language Export",
       description:
-        "Agent engineering platform — visual LangGraph canvas, IR v2 compiler, langstitch compile CLI, dev RunEvents, multi-language export (Python on PyPI today; Spring AI, Go, Rust expanding), Component Designer, marketplace, and LangTailor IDE.",
+        "Agent engineering platform — visual LangGraph canvas, IR v2 compiler, langstitch compile CLI, dev RunEvents, multi-language export (Python on PyPI and Spring AI on Maven Central; Go and Rust expanding), Component Designer, marketplace, and LangTailor IDE.",
       keywords:
         "LangStitch, LangGraph platform, agent engineering, IR v2, langstitch compile, RunEvents, visual canvas, multi-language export, Python LangGraph, Spring AI, Go, Rust, langstitch-sdk, PyPI, marketplace, LangTailor, RAG, guardrails, Component Designer, Open VSX",
       type: "website",
@@ -29,14 +31,14 @@
           name: SITE_NAME,
           url: SITE_URL + "/",
           description:
-            "Visual LangGraph platform — IR v2 canvas, langstitch-sdk compiler, marketplace, and LangTailor IDE. Python project generation ships on PyPI; Spring AI, Go, and Rust expanding.",
+            "Visual LangGraph platform — IR v2 canvas, langstitch-sdk compiler, marketplace, and LangTailor IDE. Python on PyPI and Spring AI on Maven Central; Go and Rust expanding.",
           inLanguage: "en-US",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
             url: SITE_URL + "/",
             email: EMAIL,
-            sameAs: [GITHUB_ORG, PYPI_URL, OPEN_VSX_URL, LANGTAILOR_URL, SDK_URL, MARKETPLACE_URL],
+            sameAs: [GITHUB_ORG, PYPI_URL, MAVEN_SPRING_AI_URL, GITHUB_SPRING_AI, OPEN_VSX_URL, LANGTAILOR_URL, SDK_URL, MARKETPLACE_URL],
             contactPoint: [
               {
                 "@type": "ContactPoint",
@@ -60,21 +62,22 @@
           applicationCategory: "DeveloperApplication",
           operatingSystem: "Windows, macOS",
           description:
-            "Agent engineering platform — visual canvas, IR v2 compiler, dev RunEvents, Component Designer, multi-language SDK, marketplace, and LangTailor IDE. Python ships on PyPI; Spring AI, Go, and Rust expanding.",
+            "Agent engineering platform — visual canvas, IR v2 compiler, dev RunEvents, Component Designer, multi-language SDK, marketplace, and LangTailor IDE. Python on PyPI and Spring AI on Maven Central; Go and Rust expanding.",
           featureList: [
             "Visual LangGraph canvas with IR v2",
             "langstitch compile CLI and SDK compiler",
             "Dev RunEvents for local debugging",
             "Multi-language project generation",
             "Python SDK on PyPI (langstitch-sdk)",
-            "Spring AI / Go / Rust expanding",
+            "Spring AI IR compiler on Maven Central (langstitch-spring-ai 0.1.0)",
+            "Go / Rust expanding",
             "Component Designer and marketplace",
             "LangTailor desktop IDE and VSX extension"
           ],
           url: SITE_URL + "/",
           downloadUrl: LANGTAILOR_URL,
           installUrl: PYPI_URL,
-          softwareVersion: "0.3.0",
+          softwareVersion: "0.3.1",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           author: { "@type": "Organization", name: AUTHOR, email: EMAIL },
           license: "https://opensource.org/licenses/MIT"
@@ -89,7 +92,7 @@
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Python (LangGraph) project generation ships today on PyPI and from LangTailor. Spring AI (Java), Go, and Rust are expanding targets that share the same canvas and project conventions."
+                  "Python (LangGraph) project generation ships today on PyPI and from LangTailor. Spring AI IR compiler is available on Maven Central as com.langstitch:langstitch-spring-ai:0.1.0. Go and Rust are expanding targets that share the same canvas and project conventions."
               }
             },
             {
@@ -98,7 +101,7 @@
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "No. LangStitch is a multi-language agent engineering platform. The Python SDK and project export ship today; Spring AI, Go, and Rust runtimes are expanding toward the same graphs/, skills/, guardrails/, and deploy/ layout."
+                  "No. LangStitch is a multi-language agent engineering platform. Python on PyPI and Spring AI on Maven Central ship today; Go and Rust runtimes are expanding toward the same graphs/, skills/, guardrails/, and deploy/ layout."
               }
             },
             {
@@ -125,7 +128,7 @@
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Download LangTailor v0.3.0 for Windows and macOS at langtailor.langstitch.com, or install the LangTailor Canvas VSX extension from Open VSX. Both are MIT licensed and work with the same IR v2 canvas format."
+                  "Download LangTailor v0.3.1 for Windows and macOS at langtailor.langstitch.com, or install the LangTailor Canvas VSX extension from Open VSX. Both are MIT licensed and work with the same IR v2 canvas format."
               }
             }
           ]
