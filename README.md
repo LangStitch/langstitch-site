@@ -1,6 +1,6 @@
 # LangStitch — Product Website
 
-Marketing site for the **LangStitch** agent engineering platform — visual LangGraph canvas, multi-language project generation (Python ships today; Spring AI, Go, Rust expanding), marketplace, and **LangTailor** IDE.
+Marketing site for the **LangStitch** agent engineering platform — visual LangGraph canvas, multi-language project generation (Python on PyPI and Spring AI on Maven Central today; Go and Rust expanding), marketplace, and **LangTailor** IDE.
 
 - **Live:** https://langstitch.com
 - **Docs redirect:** https://langstitch.com/docs/ → https://sdk.langstitch.com
