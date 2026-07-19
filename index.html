@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
   <script src="assets/js/seo.js" defer></script>
+  <script src="assets/js/marketplace-stats.js" defer></script>
   <script src="assets/js/features.js" defer></script>
   <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="stylesheet" href="assets/css/analytics.css" />
@@ -98,7 +99,7 @@
             <span class="hero-stat__lbl">Platform surfaces</span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat__val">77</span>
+            <span class="hero-stat__val" data-mk-total>82</span>
             <span class="hero-stat__lbl">Marketplace catalog items</span>
           </div>
           <div class="hero-stat">
@@ -189,7 +190,7 @@
         <a class="eco-card eco-card--market" href="https://marketplace.langstitch.com">
           <span class="eco-card__icon">03</span>
           <h3>Marketplace</h3>
-          <p>77 items — 20 connectors · 6 agents · 28 graphs · 12 MCP packs · 10 utility plugins · 1 canvas extension.</p>
+          <p data-mk-summary>82 items — 20 connectors · 8 agents · 28 graphs · 16 MCP packs · 10 plugins</p>
           <span class="eco-card__link">Browse catalog →</span>
         </a>
         <a class="eco-card eco-card--ide" href="https://langtailor.langstitch.com">
@@ -200,14 +201,15 @@
         </a>
       </div>
 
-      <div class="market-strip" aria-label="Marketplace catalog breakdown">
-        <div class="market-strip__item"><span class="market-strip__n">20</span><span class="market-strip__l">Connectors</span></div>
-        <div class="market-strip__item"><span class="market-strip__n">6</span><span class="market-strip__l">Agents</span></div>
-        <div class="market-strip__item"><span class="market-strip__n">28</span><span class="market-strip__l">Graphs</span></div>
-        <div class="market-strip__item"><span class="market-strip__n">12</span><span class="market-strip__l">MCP packs</span></div>
-        <div class="market-strip__item"><span class="market-strip__n">10</span><span class="market-strip__l">Utility plugins</span></div>
+      <div class="market-strip" data-mk-live aria-busy="true" aria-label="Marketplace catalog breakdown">
+        <div class="market-strip__item" data-mk-lane-row="connectors"><span class="market-strip__n" data-mk-lane="connectors">20</span><span class="market-strip__l">Connectors</span></div>
+        <div class="market-strip__item" data-mk-lane-row="agents"><span class="market-strip__n" data-mk-lane="agents">8</span><span class="market-strip__l">Agents</span></div>
+        <div class="market-strip__item" data-mk-lane-row="graphs"><span class="market-strip__n" data-mk-lane="graphs">28</span><span class="market-strip__l">Graphs</span></div>
+        <div class="market-strip__item" data-mk-lane-row="mcps"><span class="market-strip__n" data-mk-lane="mcps">16</span><span class="market-strip__l">MCP packs</span></div>
+        <div class="market-strip__item" data-mk-lane-row="plugins"><span class="market-strip__n" data-mk-lane="plugins">10</span><span class="market-strip__l">Plugins</span></div>
+        <div class="market-strip__item" data-mk-lane-row="skills" hidden><span class="market-strip__n" data-mk-lane="skills">0</span><span class="market-strip__l">Skills</span></div>
       </div>
-      <p class="market-strip__note">GitHub sign-in · sync into canvas · publish/review — <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a></p>
+      <p class="market-strip__note">Live catalog · GitHub sign-in · sync into canvas · publish/review — <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a></p>
     </div>
   </section>
 
@@ -519,7 +521,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">08</span>
             <h3>Marketplace</h3>
-            <p>77 catalog items — connectors, agents, graphs, MCP packs, utility plugins. GitHub sign-in, sync, publish/review at <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a>.</p>
+            <p><span data-mk-summary>82 items — 20 connectors · 8 agents · 28 graphs · 16 MCP packs · 10 plugins</span>. GitHub sign-in, sync, publish/review at <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a>.</p>
           </div>
         </article>
       </div>
@@ -808,7 +810,7 @@
             <li><strong>Deep evals</strong> — LangSmith-native dataset runs and trace replay are export hooks today, not full in-IDE eval suites.</li>
             <li><strong>Live collaboration</strong> — Single-editor canvas; no real-time multi-user cursors yet.</li>
             <li><strong>Enterprise identity</strong> — Tool RBAC and guardrails exist; org-wide SSO/SAML is on the roadmap.</li>
-            <li><strong>Marketplace scale</strong> — 77 pre-built catalog items (connectors, agents, skill graphs, MCP server packs, and utility plugins) with publish/review; community growth continues.</li>
+            <li><strong>Marketplace scale</strong> — <span data-mk-total>82</span> pre-built catalog items (connectors, agents, graphs, MCP packs, plugins) with publish/review; community growth continues.</li>
           </ul>
           <p class="compare-gaps-note">
             Goal: match the table stakes everyone expects, then win on export quality, governance assets,
