@@ -14,7 +14,10 @@ spec:
       defaultContainer 'node'
     }
   }
-  options { timeout(time: 20, unit: 'MINUTES') }
+  options {
+    disableConcurrentBuilds()
+    lock('langstitch-global')
+    timeout(time: 20, unit: 'MINUTES') }
   stages {
     stage('Validate') {
       steps {
