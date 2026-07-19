@@ -14,7 +14,7 @@ spec:
       defaultContainer 'node'
     }
   }
-  options { timestamps(); timeout(time: 20, unit: 'MINUTES') }
+  options { timeout(time: 20, unit: 'MINUTES') }
   stages {
     stage('Validate') {
       steps {
