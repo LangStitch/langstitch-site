@@ -78,6 +78,9 @@
           Design on a LangGraph canvas, extend with the <strong>Component Designer</strong>, share on the marketplace,
           and ship with the <strong>LangTailor</strong> IDE (Windows &amp; macOS).
           Multi-language project generation — <strong>Python on PyPI and Spring AI on Maven Central</strong>; Go and Rust are expanding.
+          Two project types: <strong>Agentic Development</strong> (graphs, skills, deploy) and <strong>Plugin Creator</strong> (multi-platform packs).
+          Scaffold with <code>langstitch plugin new</code>, build <code>.langstitch-pack.zip</code> with <code>langstitch pack</code> (fail-closed unless <code>--allow-partial</code>).
+          The marketplace also lists personas and prompts alongside connectors, graphs, and MCP packs.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://langtailor.langstitch.com/#download">Download LangTailor (Windows &amp; macOS)</a>
@@ -103,8 +106,8 @@
             <span class="hero-stat__lbl">Marketplace catalog items</span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat__val">1-click</span>
-            <span class="hero-stat__lbl">Export &amp; deploy</span>
+            <span class="hero-stat__val">Export</span>
+            <span class="hero-stat__lbl">Python · Spring AI CLI</span>
           </div>
         </div>
         </div>
@@ -206,8 +209,10 @@
         <div class="market-strip__item" data-mk-lane-row="agents"><span class="market-strip__n" data-mk-lane="agents">8</span><span class="market-strip__l">Agents</span></div>
         <div class="market-strip__item" data-mk-lane-row="graphs"><span class="market-strip__n" data-mk-lane="graphs">28</span><span class="market-strip__l">Graphs</span></div>
         <div class="market-strip__item" data-mk-lane-row="mcps"><span class="market-strip__n" data-mk-lane="mcps">16</span><span class="market-strip__l">MCP packs</span></div>
-        <div class="market-strip__item" data-mk-lane-row="plugins"><span class="market-strip__n" data-mk-lane="plugins">10</span><span class="market-strip__l">Plugins</span></div>
         <div class="market-strip__item" data-mk-lane-row="skills" hidden><span class="market-strip__n" data-mk-lane="skills">0</span><span class="market-strip__l">Skills</span></div>
+        <div class="market-strip__item" data-mk-lane-row="personas" hidden><span class="market-strip__n" data-mk-lane="personas">0</span><span class="market-strip__l">Personas</span></div>
+        <div class="market-strip__item" data-mk-lane-row="prompts" hidden><span class="market-strip__n" data-mk-lane="prompts">0</span><span class="market-strip__l">Prompts</span></div>
+        <div class="market-strip__item" data-mk-lane-row="plugins"><span class="market-strip__n" data-mk-lane="plugins">10</span><span class="market-strip__l">Plugins</span></div>
       </div>
       <p class="market-strip__note">Live catalog · GitHub sign-in · sync into canvas · publish/review — <a href="https://marketplace.langstitch.com">marketplace.langstitch.com</a></p>
     </div>
@@ -257,7 +262,7 @@
                 <span class="wf-step__phase">Ship</span>
               </div>
               <h3>Export, run, deploy — no context switch</h3>
-              <p>One click gives you a buildable Python or Spring AI project, Docker image, and Helm chart — Go and Rust language targets expanding.</p>
+              <p>Export a buildable Python project from the IDE in one step. Spring AI targets use the <code>langstitch-spring-ai</code> CLI on Maven Central — not the same one-click path. Docker and Helm bundles ship with Python exports today; Go and Rust are expanding.</p>
               <ul class="wf-step__wins">
                 <li><code>langsmith.json</code> round-trips back to the IDE</li>
                 <li>Local Build / Run / Deploy toolchain + optional Git sync</li>
@@ -326,7 +331,7 @@
 <span class="wf-term-dim">→ Agent ready on :8080</span></code></pre>
               </div>
               <div class="wf-demo__block">
-                <div class="wf-demo__label">Platform · one click from IDE</div>
+                <div class="wf-demo__label">Platform · deploy from IDE</div>
                 <pre class="wf-demo__term"><code><span class="wf-term-prompt">$</span> docker build -t billing-agent .
 <span class="wf-term-prompt">$</span> helm upgrade --install billing ./deploy/helm/billing-agent
 <span class="wf-term-ok">✓ Release billing deployed</span></code></pre>
@@ -549,7 +554,7 @@
             <span class="sdk-lang__name">Spring AI (Java)</span>
             <span class="sdk-badge sdk-badge--live">Available · Maven Central</span>
           </div>
-          <p>IR v2 → Spring Boot + Spring AI via <code>com.langstitch:langstitch-spring-ai:0.1.0</code>. LangTailor exports Spring AI projects from the canvas.</p>
+          <p>IR v2 → Spring Boot + Spring AI via <code>com.langstitch:langstitch-spring-ai:0.2.0</code>. LangTailor exports Spring AI projects; compile with the Java CLI (or canvas fallback when the JAR is unavailable).</p>
         </article>
         <article class="sdk-lang">
           <div class="sdk-lang__head">
@@ -810,7 +815,7 @@
             <li><strong>Deep evals</strong> — LangSmith-native dataset runs and trace replay are export hooks today, not full in-IDE eval suites.</li>
             <li><strong>Live collaboration</strong> — Single-editor canvas; no real-time multi-user cursors yet.</li>
             <li><strong>Enterprise identity</strong> — Tool RBAC and guardrails exist; org-wide SSO/SAML is on the roadmap.</li>
-            <li><strong>Marketplace scale</strong> — <span data-mk-total>82</span> pre-built catalog items (connectors, agents, graphs, MCP packs, plugins) with publish/review; community growth continues.</li>
+            <li><strong>Marketplace scale</strong> — <span data-mk-total>82</span> pre-built catalog items (connectors, agents, graphs, MCP packs, personas, prompts, plugins) with publish/review; community growth continues.</li>
           </ul>
           <p class="compare-gaps-note">
             Goal: match the table stakes everyone expects, then win on export quality, governance assets,

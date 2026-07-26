@@ -11,7 +11,7 @@
   var SDK_URL = "https://sdk.langstitch.com/";
   var MARKETPLACE_URL = "https://marketplace.langstitch.com/";
   var PYPI_URL = "https://pypi.org/project/langstitch-sdk/";
-  var MAVEN_SPRING_AI_URL = "https://central.sonatype.com/artifact/com.langstitch/langstitch-spring-ai/0.1.0";
+  var MAVEN_SPRING_AI_URL = "https://central.sonatype.com/artifact/com.langstitch/langstitch-spring-ai/0.2.0";
   var GITHUB_SPRING_AI = "https://github.com/LangStitch/langstitch-spring-ai";
   var OPEN_VSX_URL = "https://open-vsx.org/extension/langstitch/langtailor-canvas";
   var GITHUB_ORG = "https://github.com/LangStitch";
@@ -69,7 +69,7 @@
             "Dev RunEvents for local debugging",
             "Multi-language project generation",
             "Python SDK on PyPI (langstitch-sdk)",
-            "Spring AI IR compiler on Maven Central (langstitch-spring-ai 0.1.0)",
+            "Spring AI IR compiler on Maven Central (langstitch-spring-ai 0.2.0)",
             "Go / Rust expanding",
             "Component Designer and marketplace",
             "LangTailor desktop IDE and VSX extension"
@@ -92,7 +92,7 @@
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Python (LangGraph) project generation ships today on PyPI and from LangTailor. Spring AI IR compiler is available on Maven Central as com.langstitch:langstitch-spring-ai:0.1.0. Go and Rust are expanding targets that share the same canvas and project conventions."
+                  "Python (LangGraph) project generation ships today on PyPI and from LangTailor. Spring AI IR compiler is available on Maven Central as com.langstitch:langstitch-spring-ai:0.2.0. Go and Rust are expanding targets that share the same canvas and project conventions."
               }
             },
             {
