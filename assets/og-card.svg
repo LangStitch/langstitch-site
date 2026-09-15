@@ -18,9 +18,9 @@
   <text x="160" y="148" fill="#f5f5f5" font-family="system-ui,Segoe UI,sans-serif" font-size="34" font-weight="700" letter-spacing="-0.03em">LangStitch</text>
   <text x="160" y="178" fill="#8b929e" font-family="system-ui,Segoe UI,sans-serif" font-size="18" font-weight="500">Agent Engineering Platform</text>
   <text x="88" y="268" fill="#f5f5f5" font-family="system-ui,Segoe UI,sans-serif" font-size="52" font-weight="700" letter-spacing="-0.04em">Design agents visually.</text>
-  <text x="88" y="332" fill="#f5f5f5" font-family="system-ui,Segoe UI,sans-serif" font-size="52" font-weight="700" letter-spacing="-0.04em">Ship to production.</text>
+  <text x="88" y="332" fill="#f5f5f5" font-family="system-ui,Segoe UI,sans-serif" font-size="52" font-weight="700" letter-spacing="-0.04em">Build with your stack.</text>
   <rect x="88" y="382" width="380" height="36" rx="6" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.35)" stroke-width="1"/>
-  <text x="104" y="405" fill="#38bdf8" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="600">Canvas · SDK · Marketplace · IDE</text>
+  <text x="104" y="405" fill="#38bdf8" font-family="ui-monospace,Consolas,monospace" font-size="16" font-weight="600">Canvas Â· SDK Â· Marketplace Â· IDE</text>
   <g font-family="ui-monospace,Consolas,monospace" font-size="15" font-weight="600">
     <rect x="88" y="448" width="72" height="32" rx="6" fill="#0f0f0f" stroke="#262626"/>
     <text x="124" y="469" fill="#00e5a0" text-anchor="middle">Python</text>
@@ -28,10 +28,8 @@
     <text x="208" y="469" fill="#a5b4fc" text-anchor="middle">Java</text>
     <rect x="256" y="448" width="56" height="32" rx="6" fill="#0f0f0f" stroke="#262626"/>
     <text x="284" y="469" fill="#fcd34d" text-anchor="middle">Go</text>
-    <rect x="324" y="448" width="56" height="32" rx="6" fill="#0f0f0f" stroke="#262626"/>
-    <text x="352" y="469" fill="#fda4af" text-anchor="middle">Rust</text>
-    <rect x="392" y="448" width="88" height="32" rx="6" fill="#f5f5f5"/>
-    <text x="436" y="469" fill="#000" text-anchor="middle">Free · MIT</text>
+    <rect x="324" y="448" width="88" height="32" rx="6" fill="#f5f5f5"/>
+    <text x="368" y="469" fill="#000" text-anchor="middle">Free Â· MIT</text>
   </g>
   <rect x="760" y="120" width="352" height="360" rx="10" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
   <rect x="776" y="136" width="320" height="28" rx="4" fill="#14161a" stroke="#262626"/>
@@ -46,6 +44,6 @@
   <rect x="888" y="260" width="88" height="28" rx="4" fill="#14161a" stroke="rgba(167,139,250,0.35)"/>
   <path d="M 976 224 L 996 224" stroke="#818cf8" stroke-width="2" fill="none"/>
   <path d="M 932 238 L 932 260" stroke="#818cf8" stroke-width="2" fill="none"/>
-  <text x="88" y="560" fill="#8b929e" font-family="system-ui,Segoe UI,sans-serif" font-size="16">langstitch.com · sdk.langstitch.com · marketplace.langstitch.com</text>
+  <text x="88" y="560" fill="#8b929e" font-family="system-ui,Segoe UI,sans-serif" font-size="16">langstitch.com Â· sdk.langstitch.com Â· marketplace.langstitch.com</text>
   <rect x="900" y="532" width="212" height="4" rx="2" fill="url(#glow)"/>
 </svg>

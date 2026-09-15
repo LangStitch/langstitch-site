@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LangStitch — Visual LangGraph Platform · IR v2 Compiler · Multi-language Export</title>
-  <meta name="description" content="Agent engineering platform — visual LangGraph canvas, IR v2 compiler, langstitch compile CLI, dev RunEvents, multi-language export (Python on PyPI and Spring AI on Maven Central; Go and Rust expanding), Component Designer, marketplace, and LangTailor IDE." />
-  <meta name="keywords" content="LangStitch, LangGraph platform, agent engineering, IR v2, langstitch compile, RunEvents, visual canvas, multi-language export, Python LangGraph, Spring AI, Go, Rust, langstitch-sdk, PyPI, marketplace, LangTailor, RAG, guardrails, Component Designer, Open VSX" />
+  <title>LangStitch — AI Agent Workflows for Python, Java and Go</title>
+  <meta name="description" content="Build AI agent workflows with the LangTailor visual IDE, Python SDK, Java compiler and native Go export. Explore LangStitch releases, tools and documentation." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="LangStitch" />
   <meta name="application-name" content="LangStitch" />
   <meta property="og:site_name" content="LangStitch" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://langstitch.com/" />
-  <meta property="og:title" content="LangStitch — Design Agents Visually, Ship to Production" />
-  <meta property="og:description" content="Visual LangGraph platform — IR v2 canvas, langstitch-sdk compiler, marketplace, LangTailor IDE. Python on PyPI and Spring AI on Maven Central; Go and Rust expanding." />
-  <meta property="og:image" content="https://langstitch.com/assets/og-card.svg" />
+  <meta property="og:title" content="LangStitch — AI Agent Workflows for Python, Java and Go" />
+  <meta property="og:description" content="Visual AI agent workflows with native Python, Java and Go export, a shared IR, published SDKs and LangTailor IDE." />
+  <meta property="og:image" content="https://langstitch.com/assets/og-card.png" />
   <meta property="og:image:alt" content="LangStitch agent engineering platform" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@LangStitch" />
-  <meta name="twitter:title" content="LangStitch · Agent Engineering Platform" />
-  <meta name="twitter:description" content="Canvas · IR v2 compiler · langstitch-sdk on PyPI · Spring AI on Maven Central · Marketplace · LangTailor — Go and Rust expanding." />
-  <meta name="twitter:image" content="https://langstitch.com/assets/og-card.svg" />
+  <meta name="twitter:title" content="LangStitch — AI Agent Workflows for Python, Java and Go" />
+  <meta name="twitter:description" content="Build workflows with LangTailor, Python SDK 0.3.2, Java compiler 0.2.2 and native Go export. Read the guides and release notes." />
+  <meta name="twitter:image" content="https://langstitch.com/assets/og-card.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image:alt" content="LangStitch visual agent workflows for Python, Java and Go" />
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://langstitch.com/" />
@@ -29,11 +32,98 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
-  <script src="assets/js/seo.js" defer></script>
   <script src="assets/js/marketplace-stats.js" defer></script>
   <script src="assets/js/features.js" defer></script>
   <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="stylesheet" href="assets/css/analytics.css" />
+  <script type="application/ld+json" id="structured-data">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://langstitch.com/#organization",
+      "name": "LangStitch",
+      "url": "https://langstitch.com/",
+      "logo": "https://langstitch.com/assets/brand-logo.svg",
+      "sameAs": [
+        "https://github.com/LangStitch"
+      ],
+      "email": "connect@langstitch.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://langstitch.com/#website",
+      "url": "https://langstitch.com/",
+      "name": "LangStitch",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://langstitch.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://langstitch.com/#webpage",
+      "url": "https://langstitch.com/",
+      "name": "LangStitch — AI Agent Workflows for Python, Java and Go",
+      "description": "Visual agent workflows, native runtimes, published SDKs and documentation.",
+      "isPartOf": {
+        "@id": "https://langstitch.com/#website"
+      },
+      "dateModified": "2026-09-15"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://langtailor.langstitch.com/#software",
+      "name": "LangTailor",
+      "url": "https://langtailor.langstitch.com/",
+      "softwareVersion": "0.4.0",
+      "operatingSystem": "Windows, macOS",
+      "applicationCategory": "DeveloperApplication",
+      "description": "Visual workflow IDE with native Python, Java and Go export. Advanced feature support differs by target.",
+      "publisher": {
+        "@id": "https://langstitch.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "license": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://langstitch.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which languages can I build with LangStitch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LangTailor 0.4.0 exports Python projects using LangGraph, Java projects using Spring AI, and Go services using the standard library. Python SDK 0.3.2 is on PyPI and Java compiler 0.2.2 is on Maven Central. Go export is included in the IDE; Rust remains planned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all targets support the same features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core native functions, HTTP tools, secured invocation and build/test commands are supported. Advanced agents, RAG, MCP, streaming, durable checkpoints, debugging and reverse synchronization differ by target. Python has real MCP clients; Java and Go MCP are not implemented. Read the capability and production-readiness documentation before choosing a target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are releases and verification results documented?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The documentation includes the release notes, capability gaps and production-readiness checks. CI executes generated Python, Java and Go applications on Windows, macOS and Linux. Desktop installers are published for Windows and macOS, with checksums and source provenance. CI does not certify every production deployment or installer interaction."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#ecosystem">Skip to content</a>
@@ -52,6 +142,7 @@
       <a href="#workflow">Workflow</a>
       <a href="#features">Features</a>
       <a href="https://sdk.langstitch.com">SDK</a>
+      <a href="https://sdk.langstitch.com/docs/">Docs</a>
       <a href="https://langtailor.langstitch.com">LangTailor</a>
       <a href="https://marketplace.langstitch.com">Marketplace</a>
       <a href="#compare">Compare</a>
@@ -73,11 +164,11 @@
           <span class="hero-kicker__pill">LangStitch Platform</span>
           <span class="hero-kicker__text">Canvas · SDK · Marketplace · LangTailor IDE</span>
         </div>
-        <h1>One platform for agent engineering.<br />Four surfaces that ship together.</h1>
+        <h1>Design AI agent workflows.<br />Build in Python, Java and Go.</h1>
         <p class="lead hero-lead">
           Design on a LangGraph canvas, extend with the <strong>Component Designer</strong>, share on the marketplace,
           and ship with the <strong>LangTailor</strong> IDE (Windows &amp; macOS).
-          Multi-language project generation — <strong>Python on PyPI and Spring AI on Maven Central</strong>; Go and Rust are expanding.
+          Native project generation for <strong>Python, Java with Spring AI, and Go</strong>, with shared IR and target-specific build and test commands.
           Two project types: <strong>Agentic Development</strong> (graphs, skills, deploy) and <strong>Plugin Creator</strong> (multi-platform packs).
           Scaffold with <code>langstitch plugin new</code>, build <code>.langstitch-pack.zip</code> with <code>langstitch pack</code> (fail-closed unless <code>--allow-partial</code>).
           The marketplace also lists personas and prompts alongside connectors, graphs, and MCP packs.
@@ -88,11 +179,11 @@
           <a class="btn btn-ghost" href="https://marketplace.langstitch.com">Marketplace</a>
         </div>
         <div class="hero-meta">
-          <span class="tag tag--live">Python · PyPI</span>
-          <span class="tag tag--live">Spring AI · Maven Central</span>
-          <span class="tag">Go · Rust · expanding</span>
+          <span class="tag tag--live">Python SDK 0.3.2 · PyPI</span>
+          <span class="tag tag--live">Java compiler 0.2.2 · Maven Central</span>
+          <span class="tag">Go · native export</span>
           <span class="tag">Component Designer</span>
-          <span class="tag">LangTailor v0.3.1 · IR v2</span>
+          <span class="tag">LangTailor 0.4.0 · Spec 2.2.0</span>
           <span class="tag">MIT</span>
         </div>
 
@@ -107,7 +198,7 @@
           </div>
           <div class="hero-stat">
             <span class="hero-stat__val">Export</span>
-            <span class="hero-stat__lbl">Python · Spring AI CLI</span>
+            <span class="hero-stat__lbl">Python · Java · Go</span>
           </div>
         </div>
         </div>
@@ -147,9 +238,9 @@
       <span>Marketplace</span><span>·</span>
       <span>LangTailor IDE</span><span>·</span>
       <span>Python Shipping</span><span>·</span>
-      <span>Spring AI · Maven Central</span><span>·</span>
-      <span>Go Expanding</span><span>·</span>
-      <span>Rust Expanding</span><span>·</span>
+      <span>Java compiler 0.2.2 · Maven Central</span><span>·</span>
+      <span>Native Go</span><span>·</span>
+      <span>Shared IR</span><span>·</span>
       <span>Helm Deploy</span><span>·</span>
       <span>MCP Studio</span><span>·</span>
       <span>LangSmith</span><span>·</span>
@@ -161,14 +252,39 @@
       <span>Marketplace</span><span>·</span>
       <span>LangTailor IDE</span><span>·</span>
       <span>Python Shipping</span><span>·</span>
-      <span>Spring AI · Maven Central</span><span>·</span>
-      <span>Go Expanding</span><span>·</span>
-      <span>Rust Expanding</span><span>·</span>
+      <span>Java compiler 0.2.2 · Maven Central</span><span>·</span>
+      <span>Native Go</span><span>·</span>
+      <span>Shared IR</span><span>·</span>
       <span>Helm Deploy</span><span>·</span>
       <span>MCP Studio</span><span>·</span>
       <span>LangSmith</span><span>·</span>
     </div>
   </div>
+
+  <section id="release-updates" class="section section--alt">
+    <div class="wrap wrap--wide">
+      <div class="section-head">
+        <span class="label">Release updates</span>
+        <h2>Native runtimes, published packages and clear support boundaries</h2>
+        <p class="lead">Explore the September 2026 release and choose a runtime using the tested capabilities.</p>
+      </div>
+      <div class="eco-grid">
+        <a class="eco-card" href="https://pypi.org/project/langstitch-sdk/0.3.2/"><h3>Python SDK 0.3.2</h3><p>Real MCP transports, compiler fixes and generated application validation.</p><span class="eco-card__link">Install from PyPI →</span></a>
+        <a class="eco-card" href="https://central.sonatype.com/artifact/com.langstitch/langstitch-spring-ai/0.2.2"><h3>Java compiler 0.2.2</h3><p>Native functions, bounded HTTP tools, authentication and Spring AI runtime fixes.</p><span class="eco-card__link">Find on Maven Central →</span></a>
+        <a class="eco-card" href="https://langtailor.langstitch.com/#download"><h3>LangTailor 0.4.0</h3><p>Native Python, Java and Go export, language editors, preview and target-specific build/test commands.</p><span class="eco-card__link">Downloads and checksums →</span></a>
+        <a class="eco-card" href="https://github.com/LangStitch/langstitch-spec/releases/tag/v2.2.0"><h3>Shared spec 2.2.0</h3><p>Portable IR with preserved native bodies, target settings and migration fixes.</p><span class="eco-card__link">Package and JSON schemas →</span></a>
+      </div>
+      <p>Read the <a href="https://sdk.langstitch.com/docs/engineering/native-runtime-release/">native runtime release notes</a>, <a href="https://sdk.langstitch.com/docs/engineering/product-gap-audit/">feature gap audit</a> and <a href="https://sdk.langstitch.com/docs/engineering/production-readiness/">production-readiness evidence</a>.</p>
+    </div>
+  </section>
+  <section id="faq" class="section">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Questions</span><h2>Python, Java and Go workflow support</h2></div>
+      <article><h3>Which languages can I build with LangStitch?</h3><p>LangTailor 0.4.0 exports Python projects using LangGraph, Java projects using Spring AI, and Go services using the standard library. Python SDK 0.3.2 is on PyPI and Java compiler 0.2.2 is on Maven Central. Go export is included in the IDE; Rust remains planned.</p></article>
+      <article><h3>Do all targets support the same features?</h3><p>Core native functions, HTTP tools, secured invocation and build/test commands are supported. Advanced agents, RAG, MCP, streaming, durable checkpoints, debugging and reverse synchronization differ by target. Python has real MCP clients; Java and Go MCP are not implemented. Read the capability and production-readiness documentation before choosing a target.</p></article>
+      <article><h3>Where are releases and verification results documented?</h3><p>The documentation includes the release notes, capability gaps and production-readiness checks. CI executes generated Python, Java and Go applications on Windows, macOS and Linux. Desktop installers are published for Windows and macOS, with checksums and source provenance. CI does not certify every production deployment or installer interaction.</p></article>
+    </div>
+  </section>
 
   <section id="ecosystem" class="section section--alt">
     <div class="wrap wrap--wide">
@@ -187,7 +303,7 @@
         <a class="eco-card eco-card--sdk" href="https://sdk.langstitch.com">
           <span class="eco-card__icon">02</span>
           <h3>Multi-language SDK</h3>
-          <p>Python on PyPI and Spring AI on Maven Central today; Go and Rust share the same project conventions as they expand.</p>
+          <p>Python SDK 0.3.2 and Java compiler 0.2.2 are published. LangTailor 0.4.0 includes native Go project export.</p>
           <span class="eco-card__link">sdk.langstitch.com →</span>
         </a>
         <a class="eco-card eco-card--market" href="https://marketplace.langstitch.com">
@@ -262,7 +378,7 @@
                 <span class="wf-step__phase">Ship</span>
               </div>
               <h3>Export, run, deploy — no context switch</h3>
-              <p>Export a buildable Python project from the IDE in one step. Spring AI targets use the <code>langstitch-spring-ai</code> CLI on Maven Central — not the same one-click path. Docker and Helm bundles ship with Python exports today; Go and Rust are expanding.</p>
+              <p>Export Python, Spring AI Java or Go from the IDE, then build and test with the selected toolchain. Native code bodies and supported runtime settings stay with the graph; unsupported options are explained before export.</p>
               <ul class="wf-step__wins">
                 <li><code>langsmith.json</code> round-trips back to the IDE</li>
                 <li>Local Build / Run / Deploy toolchain + optional Git sync</li>
@@ -291,7 +407,7 @@
 
           <div class="wf-cta">
             <a class="btn btn-primary" href="https://langtailor.langstitch.com">LangTailor downloads &amp; VSX →</a>
-            <a class="btn btn-outline" href="https://sdk.langstitch.com">SDK docs</a>
+            <a class="btn btn-outline" href="https://sdk.langstitch.com/docs/">SDK docs</a>
           </div>
           <p class="wf-cta__note">Your first export is yours forever — no account, no lock-in.</p>
         </div>
@@ -320,7 +436,7 @@
 ├── deploy/helm/billing-agent/
 ├── langstitch.project.json
 └── langsmith.json
-# Go · Rust project gen → expanding</code></pre>
+# Select Python, Java or Go in the platform panel</code></pre>
               </div>
               <div class="wf-demo__block">
                 <div class="wf-demo__label">Terminal · Python runtime</div>
@@ -455,7 +571,7 @@
           <div class="feat-card__body">
             <span class="feat-card__num">04</span>
             <h3>Multi-language export</h3>
-            <p>Python on PyPI and Spring AI on Maven Central — Go and Rust expanding. Multi-module projects + <code>langsmith.json</code> round-trip.</p>
+            <p>Python, Java and Go source export with target-specific code editors and build commands. Shared IR preserves native bodies and settings.</p>
           </div>
         </article>
 
@@ -538,7 +654,7 @@
       <div class="sdk-intro">
         <span class="label">SDK</span>
         <h2>Bring LangStitch to your stack</h2>
-        <p class="sdk-lede">Extend LangStitch with the <strong>Component Designer</strong> for visual custom nodes and connectors, or use the <strong>multi-language SDK</strong> to build graphs, skills, guardrails, and policies in code. Python on PyPI and Spring AI on Maven Central today; Go and Rust follow the same project conventions as they expand.</p>
+        <p class="sdk-lede">Extend LangStitch with the <strong>Component Designer</strong> for visual custom nodes and connectors, or use the <strong>multi-language SDK</strong> to build graphs, skills, guardrails, and policies in code. Python and Java packages are published to PyPI and Maven Central. Native Go export is part of LangTailor; advanced feature coverage differs by target.</p>
       </div>
 
       <div class="sdk-langs">
@@ -554,21 +670,21 @@
             <span class="sdk-lang__name">Spring AI (Java)</span>
             <span class="sdk-badge sdk-badge--live">Available · Maven Central</span>
           </div>
-          <p>IR v2 → Spring Boot + Spring AI via <code>com.langstitch:langstitch-spring-ai:0.2.0</code>. LangTailor exports Spring AI projects; compile with the Java CLI (or canvas fallback when the JAR is unavailable).</p>
+          <p>IR v2 → Spring Boot + Spring AI via <code>com.langstitch:langstitch-spring-ai:0.2.2</code>. Native Java functions, HTTP tools and secured invocation are available through the compiler and IDE export.</p>
         </article>
         <article class="sdk-lang">
           <div class="sdk-lang__head">
             <span class="sdk-lang__name">Go</span>
-            <span class="sdk-badge">Expanding</span>
+            <span class="sdk-badge sdk-badge--live">Available · LangTailor 0.4.0</span>
           </div>
-          <p>Idiomatic Go modules for building and serving LangStitch graphs on your cluster.</p>
+          <p>Export a standard-library Go HTTP service with native functions, tools and build/test commands. No separate Go SDK package is required.</p>
         </article>
         <article class="sdk-lang">
           <div class="sdk-lang__head">
             <span class="sdk-lang__name">Rust</span>
-            <span class="sdk-badge">Expanding</span>
+            <span class="sdk-badge">Planned</span>
           </div>
-          <p>Typed, async-first crates for high-performance agent runtimes.</p>
+          <p>Rust is not an available runtime or export target in this release.</p>
         </article>
       </div>
 
@@ -577,9 +693,9 @@
           <h3>Python runtime · available now</h3>
           <span class="sdk-badge sdk-badge--live">langstitch-sdk</span>
         </div>
-        <p class="sdk-detail__lede"><code>pip install langstitch-sdk</code> — decorators, typed <code>application.yaml</code>, CLI scaffold, and LangGraph compilation. The layout other language targets will share as they expand.</p>
+        <p class="sdk-detail__lede"><code>pip install langstitch-sdk</code> — decorators, typed <code>application.yaml</code>, CLI scaffold, and LangGraph compilation. Use the shared IR to select Python, Java or Go and consult each target's supported features.</p>
         <div class="sdk-actions">
-          <a class="btn btn-primary" href="https://sdk.langstitch.com">SDK docs</a>
+          <a class="btn btn-primary" href="https://sdk.langstitch.com/docs/">SDK docs</a>
           <a class="btn btn-outline" href="https://pypi.org/project/langstitch-sdk/">PyPI</a>
           <a class="btn btn-outline" href="https://github.com/LangStitch/langstitch-sdk">GitHub</a>
         </div>
@@ -595,7 +711,7 @@
         <p class="compare-lede">
           LangStitch takes the best ideas from visual agent builders and LangGraph tooling — then centers
           <strong>production support</strong> and <strong>developer experience</strong>. Multi-language project generation —
-          <strong>Python on PyPI and Spring AI on Maven Central</strong>; Go and Rust are expanding — not throwaway JSON blobs.
+          <strong>Python SDK, Spring AI Java compiler and native Go export</strong>, with buildable source and explicit capability limits.
         </p>
       </div>
 
@@ -690,7 +806,7 @@
             </tr>
             <tr>
               <td>Multi-language production export (Git-friendly)</td>
-              <td class="compare-highlight"><span class="mark-yes">✓</span> Python · PyPI · Spring AI · Maven Central · Go / Rust <span class="mark-gap">→</span> expanding + <code>langsmith.json</code></td>
+              <td class="compare-highlight"><span class="mark-yes">✓</span> Python · Java · Go native export; shared IR and documented target limits</td>
               <td>Code export</td>
               <td>JSON / Python varies</td>
               <td>API / limited export</td>
@@ -781,9 +897,7 @@
           <h3>LangStitch edge — production &amp; DX</h3>
           <ol>
             <li>
-              <strong>Code is the contract</strong> — Export buildable Python and Spring AI projects today (Go and Rust expanding) with
-              <code>graphs/</code>, <code>skills/</code>, <code>guardrails/</code>, and
-              <code>langsmith.json</code> for round-trip IDE import. Review in PRs like any backend service.
+              <strong>Code is the contract</strong> — Export Python, Java and Go source, preserve native bodies in shared IR, and review generated projects in PRs. Native reverse code synchronization is not yet supported.
             </li>
             <li>
               <strong>Governance as assets</strong> — Skills, guardrails, business rules, and personas are
@@ -826,7 +940,7 @@
 
       <div class="compare-callout">
         <strong>Summary:</strong> LangStitch is for teams shipping LangGraph to production.
-        Python on PyPI and Spring AI on Maven Central ship today; Go and Rust are expanding. Use LangSmith for traces; use LangStitch to design, export,
+        Python SDK 0.3.2, Java compiler 0.2.2 and LangTailor 0.4.0 native Go export are available. Use LangSmith for traces; use LangStitch to design, export,
         and deploy the graph your SREs can support.
       </div>
     </div>
@@ -887,7 +1001,7 @@
         <a href="https://github.com/LangStitch/langtailor">langtailor</a>
         <a href="https://github.com/LangStitch/langstitch-sdk">langstitch-sdk</a>
         <a href="https://github.com/LangStitch/langtailor-releases/releases">releases</a>
-        <a href="docs/">docs</a>
+        <a href="https://sdk.langstitch.com/docs/">docs</a>
         <a href="https://langtailor.langstitch.com">langtailor.langstitch.com</a>
         <a href="https://sdk.langstitch.com">sdk</a>
         <a href="https://marketplace.langstitch.com">marketplace</a>

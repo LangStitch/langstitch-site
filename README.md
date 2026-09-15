@@ -1,9 +1,9 @@
 # LangStitch — Product Website
 
-Marketing site for the **LangStitch** agent engineering platform — visual LangGraph canvas, multi-language project generation (Python on PyPI and Spring AI on Maven Central today; Go and Rust expanding), marketplace, and **LangTailor** IDE.
+Product site for **LangStitch**: visual workflows, Python SDK 0.3.2, Java compiler 0.2.2, native Go export in LangTailor 0.4.0, and shared spec 2.2.0. Advanced target limits are documented explicitly; Rust remains planned.
 
 - **Live:** https://langstitch.com
-- **Docs redirect:** https://langstitch.com/docs/ → https://sdk.langstitch.com
+- **Docs redirect:** https://langstitch.com/docs/ → https://sdk.langstitch.com/docs/
 - **LangTailor (desktop IDE):** https://langtailor.langstitch.com
 - **SDK docs:** https://sdk.langstitch.com (repo: `langstitch-sdk-site`)
 
@@ -13,8 +13,8 @@ Marketing site for the **LangStitch** agent engineering platform — visual Lang
 index.html      Landing page
 try.html        Redirect to the LangTailor download
 styles.css      Site styles
-assets/         JS (SEO/structured data) and media
-docs/           Redirect to sdk.langstitch.com
+assets/         UI scripts and social preview media
+docs/           Redirect to sdk.langstitch.com/docs/
 CNAME           Custom domain (langstitch.com)
 sitemap.xml     Sitemap
 robots.txt      Crawler directives
@@ -30,6 +30,8 @@ Static site, published on every push to `main`:
 | Hostinger FTPS | `.github/workflows/deploy-hostinger.yml` | https://langstitch.com |
 
 No build step — files are served as-is.
+
+Search metadata, canonical URL, social cards and JSON-LD are present in the original HTML. FAQ structured data matches the visible questions and answers. The sitemap includes only canonical indexable pages; legacy docs and download redirects are excluded. The 1200 × 630 PNG social card is rendered from the UTF-8 SVG source. Search indexing and ranking remain controlled by search engines.
 
 ### Hostinger secrets (this repo)
 

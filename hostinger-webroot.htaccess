@@ -4,6 +4,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^(www\.)?langstitch\.com$ [NC]
+  RewriteRule ^docs/?$ https://sdk.langstitch.com/docs/ [R=301,L]
+  RewriteCond %{HTTP_HOST} ^(www\.)?langstitch\.com$ [NC]
+  RewriteRule ^try\.html$ https://langtailor.langstitch.com/#download [R=301,L,NE]
+  RewriteCond %{HTTP_HOST} ^(www\.)?langstitch\.com$ [NC]
   RewriteCond %{REQUEST_URI} !^/public_html/
   RewriteRule ^(.*)$ public_html/$1 [L]
 </IfModule>
